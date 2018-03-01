@@ -8,7 +8,7 @@ public interface IGenericDAO<T> {
 
     void delete(T object);
 
-    T findbyId(int id);
+    T findById(int id);
 
     T update(T object);
 
