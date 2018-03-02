@@ -1,9 +1,11 @@
 package entities;
 
+import javax.inject.Inject;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.security.enterprise.identitystore.Pbkdf2PasswordHash;
 import javax.validation.constraints.Email;
 import java.io.Serializable;
 
@@ -26,6 +28,19 @@ public class User implements Serializable {
 
     public User(){
         //Beautiful empty constructor for JPA
+    }
+
+    public User(String name, String password, String mail){
+        passwordHash = password;
+        username = name;
+        email = mail;
+    }
+
+    public User(String name, String password, String mail, int userid){
+        passwordHash = password;
+        username = name;
+        email = mail;
+        id = userid;
     }
 
     public int getId() {
