@@ -7,17 +7,21 @@ import entities.User;
 
 import javax.inject.Inject;
 import javax.security.enterprise.identitystore.Pbkdf2PasswordHash;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
 
 public class UserLogic implements IUserLogic {
 
-	@Inject
-	Pbkdf2PasswordHash hash;
+	private DALFactory df;
 
-	private DALFactory df = new DALFactory();
+	public UserLogic(){
+		df = new DALFactory();
+	}
 
-	public User addUserToCollection(String username, String password, String email, int id) {
+	public User addUserToCollection(String username, String password, String email, int id) throws InvalidKeySpecException, NoSuchAlgorithmException {
 		UserCollectionDAO dao = df.getUserCollectionDAO();
-		User newUser = new User(username,hash.generate(password.toCharArray()),email,id);
+		String pwHash = BLL.Utilities.Hashing.generatePasswordHash(password,"SaltySalt"); //STATIC SALT FOR TEST PURPOSES ONLY
+		User newUser = new User(username,pwHash,email,id);
 		return dao.add(newUser);
 	}
 
@@ -26,7 +30,4 @@ public class UserLogic implements IUserLogic {
 		return dao.findByUsername(username);
 	}
 
-	public boolean verifyPassword(String enteredPassword, String passwordHash) {
-		return hash.verify(enteredPassword.toCharArray(),passwordHash);
-	}
 }

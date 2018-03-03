@@ -5,9 +5,9 @@ import DAL.Implementations.UserCollectionDAO;
 
 public class DALFactory implements IDALFactory {
 
-	private static UserCollectionDAO uCollectionDAO;
+	private UserCollectionDAO uCollectionDAO;
 
-	public UserCollectionDAO getUserCollectionDAO() {
+	public  UserCollectionDAO getUserCollectionDAO() {
 		if(uCollectionDAO == null){
 			uCollectionDAO = new UserCollectionDAO();
 		}
