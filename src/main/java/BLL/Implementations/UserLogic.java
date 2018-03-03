@@ -20,7 +20,7 @@ public class UserLogic implements IUserLogic {
 
 	public User addUserToCollection(String username, String password, String email, int id) throws InvalidKeySpecException, NoSuchAlgorithmException {
 		UserCollectionDAO dao = df.getUserCollectionDAO();
-		String pwHash = BLL.Utilities.Hashing.generatePasswordHash(password,"SaltySalt"); //STATIC SALT FOR TEST PURPOSES ONLY
+		String pwHash = BLL.Utilities.Hashing.generatePasswordHash(password);
 		User newUser = new User(username,pwHash,email,id);
 		return dao.add(newUser);
 	}
