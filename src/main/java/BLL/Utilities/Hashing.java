@@ -23,6 +23,7 @@ public  class Hashing {
 		BigInteger i2 = new BigInteger(1,salt);
 		String output = iterations + ":" + String.format("%064x",i2) + ":" + String.format("%064x",i);
 
+		System.out.println(output);
 		return output;
 	}
 
@@ -34,7 +35,7 @@ public  class Hashing {
 		return salt;
 	}
 
-	public static boolean verifyPassword(String password, String passwordHash) throws NoSuchAlgorithmException, InvalidKeySpecException {
+	public static boolean verifyPassword(String passwordHash, String password) throws NoSuchAlgorithmException, InvalidKeySpecException {
 
 		String[] hashArray = passwordHash.split(":");
 		byte[] salt = hashArray[1].getBytes();

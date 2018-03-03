@@ -30,4 +30,9 @@ public class UserLogic implements IUserLogic {
 		return dao.findByUsername(username);
 	}
 
+	@Override
+	public boolean verifyUserPassword(String passwordHash, String password) throws InvalidKeySpecException, NoSuchAlgorithmException {
+		return BLL.Utilities.Hashing.verifyPassword(passwordHash,password);
+	}
+
 }

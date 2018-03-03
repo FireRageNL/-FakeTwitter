@@ -11,4 +11,6 @@ public interface IUserLogic {
 
 	User getUserFromDatabase(String username);
 
+	boolean verifyUserPassword(String passwordHash, String password) throws InvalidKeySpecException, NoSuchAlgorithmException;
+
 }
