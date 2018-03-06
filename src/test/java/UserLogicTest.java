@@ -25,11 +25,11 @@ public class UserLogicTest {
 		Assert.assertEquals(1,toFind.getId());
 	}
 
-	@Test
+/*	@Test
 	public void VerifyPasswordOfUser_TestPassword123_ReturnsTrue() throws InvalidKeySpecException, NoSuchAlgorithmException {
 		String passwordHash = "2500:76606ba8a313ea83ffe3c6bd49973dd7492c0c6abe27ec308e813162c49d5974:41408f68f07a89865c3b93be0297b1437258e27485571860c8d429e831801821";
 
 		Assert.assertTrue(ul.verifyUserPassword(passwordHash,"TestPassword123"));
 
-	}
+	}*/
 }
