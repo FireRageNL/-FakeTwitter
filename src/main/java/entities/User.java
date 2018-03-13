@@ -1,11 +1,9 @@
 package entities;
 
-import javax.inject.Inject;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.security.enterprise.identitystore.Pbkdf2PasswordHash;
 import javax.validation.constraints.Email;
 import java.io.Serializable;
 

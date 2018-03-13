@@ -19,9 +19,7 @@ public  class Hashing {
 		SecretKeyFactory skf = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
 		byte[] hash = skf.generateSecret(spec).getEncoded();
 
-		BigInteger i = new BigInteger(1,hash);
-		BigInteger i2 = new BigInteger(1,salt);
-		String output = iterations + ":" + String.format("%064x",i2) + ":" + String.format("%064x",i);
+		String output = iterations + ":" + toHex(salt) + ":" + toHex(hash);
 
 		System.out.println(output);
 		return output;
@@ -30,9 +28,22 @@ public  class Hashing {
 
 	public static byte[] getSalt() throws NoSuchAlgorithmException {
 		SecureRandom rand = SecureRandom.getInstance("SHA1PRNG");
-		byte[] salt = new byte[32];
+		byte[] salt = new byte[16];
 		rand.nextBytes(salt);
 		return salt;
+	}
+
+	private static String toHex(byte[] array)
+	{
+		BigInteger bi = new BigInteger(1, array);
+		String hex = bi.toString(16);
+		int paddingLength = (array.length * 2) - hex.length();
+		if(paddingLength > 0)
+		{
+			return String.format("%0"  +paddingLength + "d", 0) + hex;
+		}else{
+			return hex;
+		}
 	}
 
 	public static boolean verifyPassword(String passwordHash, String password) throws NoSuchAlgorithmException, InvalidKeySpecException {
