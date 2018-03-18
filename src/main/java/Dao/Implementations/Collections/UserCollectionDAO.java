@@ -7,7 +7,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 public class UserCollectionDAO implements IUserDAO {
 
-	CopyOnWriteArrayList<Account> accountList = new CopyOnWriteArrayList<Account>();
+	CopyOnWriteArrayList<Account> accountList = new CopyOnWriteArrayList<>();
 
 
 	public Account add(Account object) {

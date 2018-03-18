@@ -14,7 +14,7 @@ public class KweetCollectionDAO implements IKweetDAO {
 
 	@Override
 	public List<Kweet> getAllMessagesFromUser(String userName) {
-		List<Kweet> kweetsByUser = new ArrayList<Kweet>();
+		List<Kweet> kweetsByUser = new ArrayList<>();
 		for(Kweet k: kweets){
 			if(k.getOwner().getUsername() == userName){
 				kweetsByUser.add(k);
@@ -55,11 +55,13 @@ public class KweetCollectionDAO implements IKweetDAO {
 
 	@Override
 	public Kweet update(Kweet object) {
-		for(Kweet k : kweets){
-			if(k.getId() == object.getId()){
-				kweets.remove(k);
-				kweets.add(object);
-				return object;
+		if(findById(object.getId()) != null){
+			for(Kweet k : kweets){
+				if(k.getId() == object.getId()){
+					kweets.remove(k);
+					kweets.add(object);
+					return object;
+				}
 			}
 		}
 		return null;

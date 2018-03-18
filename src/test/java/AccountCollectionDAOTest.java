@@ -32,6 +32,53 @@ public class AccountCollectionDAOTest {
 	}
 
 	@Test
+	public void DeleteById_UserInDatabase_DeletesUser(){
+		uDAO.deleteById(1);
+		Assert.assertNull(uDAO.findById(1));
+	}
+
+	@Test
+	public void Delete_UserInDatabase_DeletesUser(){
+		Account toDelete = uDAO.findById(1);
+		uDAO.delete(toDelete);
+		Assert.assertNull(uDAO.findById(1));
+	}
+
+	@Test
+	public void FindByUsername_UserInDatabase_ReturnsUser(){
+		Account toFind = uDAO.findByUsername("Test");
+
+		Assert.assertEquals(1,toFind.getId());
+	}
+
+	@Test
+	public void FindByUsername_NotInDatabase_ReturnsNull(){
+		Assert.assertNull(uDAO.findByUsername("Wheeeeeee"));
+	}
+
+	@Test
+	public void UpdateUser_UserInDatbase_UpdatesUser(){
+		Account usr = uDAO.findById(1);
+		usr.setUsername("Bye");
+
+		Account updated = uDAO.update(usr);
+
+		Assert.assertEquals("Bye",updated.getUsername());
+
+	}
+
+	@Test
+	public void UpdateUser_NotInDatabase_ReturnsNull(){
+		Account usr = new Account("Test123","FakeHash","FakeEmails@failfail.com",3);
+
+		Assert.assertNull(uDAO.update(usr));
+	}
+
+	@Test
+	public void UpdateUser_EmptyUser_ReturnsNull(){
+		Assert.assertNull(uDAO.update(new Account()));
+	}
+	@Test
 	public void Count_TwoUsersInDatabase_ReturnsTwo(){
 	Assert.assertEquals(2,uDAO.countUsers());
 	}

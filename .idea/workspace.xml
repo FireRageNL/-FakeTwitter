@@ -8,27 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e96f035-7408-471b-a8fc-1050a43da036" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Dao/Implementations/Collections/KweetCollectionDAO.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Dao/Implementations/Collections/UserCollectionDAO.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Dao/Implementations/JPA/KweetDAO.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Dao/Interfaces/IKweetDAO.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Entities/Account.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Entities/Kweet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/KweetCollectionDAOTest.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/Implementations/GenericDAO.java" afterPath="$PROJECT_DIR$/src/main/java/Dao/Implementations/JPA/GenericDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/Implementations/UserCollectionDAO.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/Implementations/UserDAO.java" afterPath="$PROJECT_DIR$/src/main/java/Dao/Implementations/JPA/UserDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/Interfaces/IUserDAO.java" afterPath="$PROJECT_DIR$/src/main/java/Dao/Interfaces/IUserDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Logic/Implementations/UserLogic.java" afterPath="$PROJECT_DIR$/src/main/java/Logic/Implementations/UserLogic.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Logic/Interfaces/IUserLogic.java" afterPath="$PROJECT_DIR$/src/main/java/Logic/Interfaces/IUserLogic.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/User.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UserCollectionDAOTest.java" afterPath="$PROJECT_DIR$/src/test/java/AccountCollectionDAOTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UserLogicTest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/basic-jee/META-INF/MANIFEST.MF" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/basic-jee/WEB-INF/beans.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/basic-jee/WEB-INF/classes/META-INF/persistence.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/entities/User_.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/Implementations/Collections/KweetCollectionDAO.java" afterPath="$PROJECT_DIR$/src/main/java/Dao/Implementations/Collections/KweetCollectionDAO.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Dao/Implementations/Collections/UserCollectionDAO.java" afterPath="$PROJECT_DIR$/src/main/java/Dao/Implementations/Collections/UserCollectionDAO.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AccountCollectionDAOTest.java" afterPath="$PROJECT_DIR$/src/test/java/AccountCollectionDAOTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/KweetCollectionDAOTest.java" afterPath="$PROJECT_DIR$/src/test/java/KweetCollectionDAOTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,51 +61,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IKweetDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Dao/Interfaces/IKweetDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="52" lean-forward="false" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="KweetCollectionDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Dao/Implementations/Collections/KweetCollectionDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="58" column="38" lean-forward="false" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
+            <state relative-caret-position="306">
+              <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#442#449#0" expanded="true" />
-                <element signature="e#842#843#0" expanded="true" />
-                <element signature="e#869#870#0" expanded="true" />
+                <element signature="e#837#838#0" expanded="true" />
+                <element signature="e#864#865#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccountCollectionDAOTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AccountCollectionDAOTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/AccountCollectionDAOTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+            <state relative-caret-position="1292">
+              <caret line="78" column="52" lean-forward="false" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1270#1271#0" expanded="true" />
+                <element signature="e#1328#1329#0" expanded="true" />
+                <element signature="e#1785#1786#0" expanded="true" />
+                <element signature="e#1837#1838#0" expanded="true" />
+                <element signature="e#1896#1897#0" expanded="true" />
+                <element signature="e#1942#1943#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IUserDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Dao/Interfaces/IUserDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -151,15 +117,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KweetCollectionDAOTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="KweetCollectionDAOTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/KweetCollectionDAOTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-123">
-              <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+            <state relative-caret-position="688">
+              <caret line="100" column="17" lean-forward="false" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#977#978#0" expanded="true" />
-                <element signature="e#1024#1025#0" expanded="true" />
+                <element signature="e#936#937#0" expanded="true" />
+                <element signature="e#983#984#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Hashing.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Logic/Utilities/Hashing.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="67" column="5" lean-forward="true" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KwetterJPA.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Dao/Interfaces/KwetterJPA.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -168,8 +156,8 @@
       <file leaf-file-name="UserCollectionDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Dao/Implementations/Collections/UserCollectionDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-426">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="255">
+              <caret line="39" column="45" lean-forward="true" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -210,7 +198,6 @@
         <option value="$PROJECT_DIR$/src/main/java/Logic/Interfaces/IUserLogic.java" />
         <option value="$PROJECT_DIR$/src/main/java/Dao/Implementations/UserCollectionDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/Dao/Implementations/UserDAO.java" />
-        <option value="$PROJECT_DIR$/src/test/java/AccountCollectionDAOTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Dao/Interfaces/IKwitizenDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/Entities/Kwitizen.java" />
         <option value="$PROJECT_DIR$/src/main/java/Dao/Interfaces/IUserDAO.java" />
@@ -218,12 +205,13 @@
         <option value="$PROJECT_DIR$/src/main/java/Entities/Account.java" />
         <option value="$PROJECT_DIR$/src/main/java/Dao/Implementations/JPA/GenericDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/Dao/Implementations/JPA/UserDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Dao/Implementations/Collections/UserCollectionDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/Dao/Interfaces/IKweetDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Dao/Implementations/Collections/KweetCollectionDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/Dao/Implementations/JPA/KweetDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/Entities/Kweet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Dao/Implementations/Collections/UserCollectionDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Dao/Implementations/Collections/KweetCollectionDAO.java" />
         <option value="$PROJECT_DIR$/src/test/java/KweetCollectionDAOTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/AccountCollectionDAOTest.java" />
       </list>
     </option>
   </component>
@@ -471,7 +459,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.KweetCollectionDAOTest">
+  <component name="RunManager" selected="JUnit.AccountCollectionDAOTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -630,6 +618,26 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
     </configuration>
+    <configuration name="AccountCollectionDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="basic-jee" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AccountCollectionDAOTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration name="KweetCollectionDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="basic-jee" />
@@ -650,14 +658,14 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="KweetCollectionDAOTest.GetKweetById_KweetInDB_ReturnsKweet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="KweetCollectionDAOTest.DeleteKweet_DeletesKweet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="basic-jee" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="KweetCollectionDAOTest" />
-      <option name="METHOD_NAME" value="GetKweetById_KweetInDB_ReturnsKweet" />
+      <option name="METHOD_NAME" value="DeleteKweet_DeletesKweet" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -670,14 +678,34 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="UserLogicTest.GetUserFromDatabase_UserInDatabase_ReturnsUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="KweetCollectionDAOTest.UpdateKweet_KweetDoesntExist_ReturnsNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="basic-jee" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UserLogicTest" />
-      <option name="METHOD_NAME" value="GetUserFromDatabase_UserInDatabase_ReturnsUser" />
+      <option name="MAIN_CLASS_NAME" value="KweetCollectionDAOTest" />
+      <option name="METHOD_NAME" value="UpdateKweet_KweetDoesntExist_ReturnsNull" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="KweetCollectionDAOTest.UpdateKweet_KweetInDB_ReturnsUpdatedKWeet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="basic-jee" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="KweetCollectionDAOTest" />
+      <option name="METHOD_NAME" value="UpdateKweet_KweetInDB_ReturnsUpdatedKWeet" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -750,17 +778,21 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="4">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="GlassFish Server.Glasvis" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.UserLogicTest.GetUserFromDatabase_UserInDatabase_ReturnsUser" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.KweetCollectionDAOTest.GetKweetById_KweetInDB_ReturnsKweet" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.KweetCollectionDAOTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.KweetCollectionDAOTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.KweetCollectionDAOTest.DeleteKweet_DeletesKweet" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.KweetCollectionDAOTest.UpdateKweet_KweetInDB_ReturnsUpdatedKWeet" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.KweetCollectionDAOTest.UpdateKweet_KweetDoesntExist_ReturnsNull" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.AccountCollectionDAOTest" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.KweetCollectionDAOTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.KweetCollectionDAOTest.GetKweetById_KweetInDB_ReturnsKweet" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.UserLogicTest.GetUserFromDatabase_UserInDatabase_ReturnsUser" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.AccountCollectionDAOTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.KweetCollectionDAOTest.UpdateKweet_KweetDoesntExist_ReturnsNull" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.KweetCollectionDAOTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.KweetCollectionDAOTest.UpdateKweet_KweetInDB_ReturnsUpdatedKWeet" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.KweetCollectionDAOTest.DeleteKweet_DeletesKweet" />
       </list>
     </recent_temporary>
   </component>
@@ -779,26 +811,44 @@
       <updated>1521383021006</updated>
       <workItem from="1521383022474" duration="1963000" />
       <workItem from="1521385310664" duration="1051000" />
-      <workItem from="1521386383504" duration="3195000" />
+      <workItem from="1521386383504" duration="4768000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
+    <history-entry file="AccountCollectionDAOTest - 2018.03.18 at 17h 39m 12s.xml">
+      <configuration name="AccountCollectionDAOTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="KweetCollectionDAOTest - 2018.03.18 at 17h 08m 31s.xml">
       <configuration name="KweetCollectionDAOTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="KweetCollectionDAOTest - 2018.03.18 at 17h 12m 52s.xml">
       <configuration name="KweetCollectionDAOTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="KweetCollectionDAOTest - 2018.03.18 at 17h 24m 54s.xml">
+      <configuration name="KweetCollectionDAOTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="KweetCollectionDAOTest - 2018.03.18 at 17h 38m 01s.xml">
+      <configuration name="KweetCollectionDAOTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="KweetCollectionDAOTest_DeleteKweet_DeletesKweet - 2018.03.18 at 17h 20m 10s.xml">
+      <configuration name="KweetCollectionDAOTest.DeleteKweet_DeletesKweet" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="KweetCollectionDAOTest_DeleteKweet_DeletesKweet - 2018.03.18 at 17h 20m 36s.xml">
+      <configuration name="KweetCollectionDAOTest.DeleteKweet_DeletesKweet" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="KweetCollectionDAOTest_GetKweetById_KweetInDB_ReturnsKweet - 2018.03.18 at 17h 08m 15s.xml">
       <configuration name="KweetCollectionDAOTest.GetKweetById_KweetInDB_ReturnsKweet" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserLogicTest_GetUserFromDatabase_UserInDatabase_ReturnsUser - 2018.03.18 at 16h 07m 41s.xml">
-      <configuration name="UserLogicTest.GetUserFromDatabase_UserInDatabase_ReturnsUser" configurationId="JUnit" />
+    <history-entry file="KweetCollectionDAOTest_UpdateKweet_KweetDoesntExist_ReturnsNull - 2018.03.18 at 17h 38m 24s.xml">
+      <configuration name="KweetCollectionDAOTest.UpdateKweet_KweetDoesntExist_ReturnsNull" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="KweetCollectionDAOTest_UpdateKweet_KweetInDB_ReturnsUpdatedKWeet - 2018.03.18 at 17h 33m 23s.xml">
+      <configuration name="KweetCollectionDAOTest.UpdateKweet_KweetInDB_ReturnsUpdatedKWeet" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6209000" />
+    <option name="totallyTimeSpent" value="7782000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -818,13 +868,13 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3212766" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32021275" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3223754" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31495228" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -848,7 +898,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1075,24 +1125,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/Interfaces/KwetterJPA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Logic/Utilities/Hashing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Logic/Interfaces/IDALFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1207,14 +1239,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/Implementations/Collections/UserCollectionDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-426">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Dao/Implementations/JPA/GenericDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
@@ -1239,19 +1263,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#258#259#0" expanded="true" />
             <element signature="e#276#277#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/Implementations/Collections/KweetCollectionDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="58" column="38" lean-forward="false" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#442#449#0" expanded="true" />
-            <element signature="e#842#843#0" expanded="true" />
-            <element signature="e#869#870#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1282,24 +1293,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/AccountCollectionDAOTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/Interfaces/KwetterJPA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/KweetCollectionDAOTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Logic/Utilities/Hashing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-123">
-          <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+        <state relative-caret-position="680">
+          <caret line="67" column="5" lean-forward="true" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/Implementations/Collections/UserCollectionDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="39" column="45" lean-forward="true" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/Implementations/Collections/KweetCollectionDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#977#978#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
+            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#864#865#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/KweetCollectionDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="100" column="17" lean-forward="false" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#936#937#0" expanded="true" />
+            <element signature="e#983#984#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/AccountCollectionDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="78" column="52" lean-forward="false" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1270#1271#0" expanded="true" />
+            <element signature="e#1328#1329#0" expanded="true" />
+            <element signature="e#1785#1786#0" expanded="true" />
+            <element signature="e#1837#1838#0" expanded="true" />
+            <element signature="e#1896#1897#0" expanded="true" />
+            <element signature="e#1942#1943#0" expanded="true" />
           </folding>
         </state>
       </provider>

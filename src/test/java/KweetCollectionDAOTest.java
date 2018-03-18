@@ -1,5 +1,4 @@
 import Dao.Implementations.Collections.KweetCollectionDAO;
-import Dao.Implementations.JPA.KweetDAO;
 import Entities.Account;
 import Entities.Kweet;
 import org.junit.Assert;
@@ -32,7 +31,7 @@ public class KweetCollectionDAOTest {
 	public void GetKweetById_KweetInDB_ReturnsKweet(){
 		Kweet k = kweetDAO.findById(1);
 
-		Assert.assertEquals(k.getMessageContents(),"Hello !");
+		Assert.assertEquals("Hello !",k.getMessageContents());
 	}
 
 	@Test
@@ -50,6 +49,25 @@ public class KweetCollectionDAOTest {
 	}
 
 	@Test
+	public void DeleteKweet_KweetInDB_DeletesKweet(){
+
+		Kweet k1 = kweetDAO.findById(1);
+
+		kweetDAO.delete(k1);
+
+		List<Kweet> kweetsByU1 = kweetDAO.getAllMessagesFromUser("Test");
+
+		Assert.assertEquals(1,kweetsByU1.size());
+	}
+
+	@Test
+	public void DeleteKweetByID_KweetInDB_KweetDeleted(){
+		kweetDAO.deleteById(1);
+
+		Assert.assertNull(kweetDAO.findById(1));
+	}
+
+	@Test
 	public void AddKweet_returnsAddedKweet(){
 
 		Account u2 = new Account("Test2","AnotherFakePasswordHash","Another@fakemail.coom",2);
@@ -58,6 +76,31 @@ public class KweetCollectionDAOTest {
 		Kweet returnedKweet = kweetDAO.add(k);
 
 		Assert.assertEquals(k.getMessageContents(),returnedKweet.getMessageContents());
+	}
+
+	@Test
+	public void UpdateKweet_KweetInDB_ReturnsUpdatedKWeet(){
+		Kweet k = kweetDAO.findById(1);
+		k.setMessageContents("Updated!");
+
+		Kweet updatedKweet = kweetDAO.update(k);
+
+		Assert.assertEquals("Updated!",updatedKweet.getMessageContents());
+	}
+
+	@Test
+	public void UpdateKWeet_EmptyKweet_ReturnsNull(){
+		Kweet k = new Kweet();
+
+		Assert.assertNull(kweetDAO.update(k));
+	}
+
+	@Test
+	public void UpdateKweet_KweetDoesntExist_ReturnsNull(){
+		Kweet k = new Kweet();
+		k.setId(5);
+
+		Assert.assertNull(kweetDAO.update(k));
 	}
 
 }
