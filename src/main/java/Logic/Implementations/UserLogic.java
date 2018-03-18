@@ -2,9 +2,9 @@ package Logic.Implementations;
 
 import Dao.Interfaces.IUserDAO;
 import Dao.Interfaces.KwetterJPA;
+import Entities.Account;
 import Logic.Interfaces.IUserLogic;
 import Logic.Utilities.Hashing;
-import entities.User;
 
 import javax.inject.Inject;
 import java.security.NoSuchAlgorithmException;
@@ -18,13 +18,13 @@ public class UserLogic implements IUserLogic {
 	@KwetterJPA
 	private IUserDAO userDAO;
 
-	public User addUserToCollection(String username, String password, String email, int id) throws InvalidKeySpecException, NoSuchAlgorithmException {
+	public Account addUserToCollection(String username, String password, String email, int id) throws InvalidKeySpecException, NoSuchAlgorithmException {
 		String pwHash = Hashing.generatePasswordHash(password);
-		User newUser = new User(username,pwHash,email,id);
-		return userDAO.add(newUser);
+		Account newAccount = new Account(username,pwHash,email,id);
+		return userDAO.add(newAccount);
 	}
 
-	public User getUserFromDatabase(String username) {
+	public Account getUserFromDatabase(String username) {
 		return userDAO.findByUsername(username);
 	}
 

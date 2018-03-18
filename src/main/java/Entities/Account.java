@@ -1,13 +1,15 @@
-package entities;
+package Entities;
 
 import javax.inject.Named;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
 
 @Entity
 @Named
-public class User implements Serializable {
+public class Account implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,17 +25,30 @@ public class User implements Serializable {
     @Email
     private String email;
 
-    public User(){
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<Account> followers;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<Account> follwing;
+
+    private String Biography;
+
+    private String Location;
+
+    private Date LastLogin;
+
+
+    public Account(){
         //Beautiful empty constructor for JPA
     }
 
-    public User(String name, String password, String mail){
+    public Account(String name, String password, String mail){
         passwordHash = password;
         username = name;
         email = mail;
     }
 
-    public User(String name, String password, String mail, int userid){
+    public Account(String name, String password, String mail, int userid){
         passwordHash = password;
         username = name;
         email = mail;

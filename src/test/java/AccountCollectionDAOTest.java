@@ -1,19 +1,19 @@
-import Dao.Implementations.UserCollectionDAO;
-import entities.User;
+import Dao.Implementations.Collections.UserCollectionDAO;
+import Entities.Account;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.Assert;
 
 
-public class UserCollectionDAOTest {
+public class AccountCollectionDAOTest {
 
 	private UserCollectionDAO uDAO;
 
 	@Before
 	public void Setup(){
 		uDAO = new UserCollectionDAO();
-		User u1 = new User("Test","FakePasswordHash","FakeMail@fake.com",1);
-		User u2 = new User("Test2","AnotherFakePasswordHash","Another@fakemail.coom",2);
+		Account u1 = new Account("Test","FakePasswordHash","FakeMail@fake.com",1);
+		Account u2 = new Account("Test2","AnotherFakePasswordHash","Another@fakemail.coom",2);
 
 		uDAO.add(u1);
 		uDAO.add(u2);
@@ -21,7 +21,7 @@ public class UserCollectionDAOTest {
 
 	@Test
 	public void FindById_IdInCollection_ReturnsUser(){
-		User toFind = uDAO.findById(1);
+		Account toFind = uDAO.findById(1);
 
 		Assert.assertEquals("Test",toFind.getUsername());
 	}
@@ -38,10 +38,10 @@ public class UserCollectionDAOTest {
 
 	@Test
 	public void AddUser_NewUser_ReturnsNewUser(){
-		User toAdd = new User("Testing","ShortHash","WhatWhat@no.com",3);
+		Account toAdd = new Account("Testing","ShortHash","WhatWhat@no.com",3);
 
-		User addedUser = uDAO.add(toAdd);
+		Account addedAccount = uDAO.add(toAdd);
 
-		Assert.assertEquals("Testing",addedUser.getUsername());
+		Assert.assertEquals("Testing", addedAccount.getUsername());
 	}
 }

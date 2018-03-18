@@ -1,4 +1,4 @@
-package Dao.Implementations;
+package Dao.Implementations.JPA;
 
 import Dao.Interfaces.IGenericDAO;
 import Dao.Interfaces.KwetterJPA;
