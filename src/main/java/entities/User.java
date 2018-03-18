@@ -1,17 +1,16 @@
 package entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.inject.Named;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import java.io.Serializable;
 
 @Entity
+@Named
 public class User implements Serializable {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column(unique = true)

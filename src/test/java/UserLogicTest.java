@@ -1,4 +1,4 @@
-import BLL.Implementations.UserLogic;
+import Logic.Implementations.UserLogic;
 import entities.User;
 import org.junit.Assert;
 import org.junit.Before;

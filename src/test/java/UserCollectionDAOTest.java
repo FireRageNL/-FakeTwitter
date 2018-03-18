@@ -1,4 +1,4 @@
-import DAL.Implementations.UserCollectionDAO;
+import Dao.Implementations.UserCollectionDAO;
 import entities.User;
 import org.junit.Before;
 import org.junit.Test;
