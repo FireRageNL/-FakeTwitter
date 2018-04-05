@@ -14,4 +14,8 @@ public interface IUserLogic {
 
 	boolean verifyUserPassword(String passwordHash, String password) throws InvalidKeySpecException, NoSuchAlgorithmException;
 
+	void addFollower(Account toEdit, Account newFollower);
+
+	void deleteFollower(Account toEdit, Account removeFollower);
+
 }

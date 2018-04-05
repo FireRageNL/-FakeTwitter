@@ -86,4 +86,44 @@ public class Account implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public List<Account> getFollowers() {
+        return followers;
+    }
+
+    public void setFollowers(List<Account> followers) {
+        this.followers = followers;
+    }
+
+    public List<Account> getFollwing() {
+        return follwing;
+    }
+
+    public void setFollwing(List<Account> follwing) {
+        this.follwing = follwing;
+    }
+
+    public String getBiography() {
+        return Biography;
+    }
+
+    public void setBiography(String biography) {
+        Biography = biography;
+    }
+
+    public String getLocation() {
+        return Location;
+    }
+
+    public void setLocation(String location) {
+        Location = location;
+    }
+
+    public Date getLastLogin() {
+        return LastLogin;
+    }
+
+    public void setLastLogin(Date lastLogin) {
+        LastLogin = lastLogin;
+    }
 }

@@ -33,4 +33,14 @@ public class UserLogic implements IUserLogic {
 		return Hashing.verifyPassword(passwordHash,password);
 	}
 
+	@Override
+	public void addFollower(Account toEdit, Account newFollower) {
+
+	}
+
+	@Override
+	public void deleteFollower(Account toEdit, Account removeFollower) {
+
+	}
+
 }

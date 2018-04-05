@@ -21,7 +21,6 @@ public  class Hashing {
 
 		String output = iterations + ":" + toHex(salt) + ":" + toHex(hash);
 
-		System.out.println(output);
 		return output;
 	}
 
@@ -46,23 +45,34 @@ public  class Hashing {
 		}
 	}
 
+
+	private static byte[] fromHex(String hex) throws NoSuchAlgorithmException
+	{
+		byte[] bytes = new byte[hex.length() / 2];
+		for(int i = 0; i<bytes.length ;i++)
+		{
+			bytes[i] = (byte)Integer.parseInt(hex.substring(2 * i, 2 * i + 2), 16);
+		}
+		return bytes;
+	}
+
 	public static boolean verifyPassword(String passwordHash, String password) throws NoSuchAlgorithmException, InvalidKeySpecException {
 
 		String[] hashArray = passwordHash.split(":");
-		byte[] salt = hashArray[1].getBytes();
 		int iterations = Integer.parseInt(hashArray[0]);
+		byte[] salt = fromHex(hashArray[1]);
+		byte[] hash = fromHex(hashArray[2]);
 
-		PBEKeySpec spec = new PBEKeySpec(password.toCharArray(),salt,iterations,256);
+		PBEKeySpec spec = new PBEKeySpec(password.toCharArray(),salt,iterations,hash.length * 8);
 		SecretKeyFactory skf = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
-		byte[] hash = skf.generateSecret(spec).getEncoded();
+		byte[] enteredPasswordHash = skf.generateSecret(spec).getEncoded();
 
-		BigInteger i = new BigInteger(1,hash);
-		String toVerify =  String.format("%064x",i);
-
-		if(toVerify.equals(hashArray[2])){
-			return true;
+		int diff = hash.length ^ enteredPasswordHash.length;
+		for(int i = 0; i < hash.length && i < enteredPasswordHash.length; i++)
+		{
+			diff |= hash[i] ^ enteredPasswordHash[i];
 		}
-		return false;
+		return diff == 0;
 
 
 	}
