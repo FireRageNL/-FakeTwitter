@@ -9,7 +9,6 @@ import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
 
 
-@Singleton
 public  class Hashing {
 
 	private Hashing(){
