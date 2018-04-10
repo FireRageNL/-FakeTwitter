@@ -22,9 +22,9 @@ public class HashingTest {
 	}
 
 	//This is a stress test to ensure that at least 100 hashes a second can be generated
-	@Test(timeout=1000)
+	@Test(timeout=10000)
 	public void HashingStressTest() throws InvalidKeySpecException, NoSuchAlgorithmException {
-		for(int i = 0; i < 5; i++){
+		for(int i = 0; i < 75; i++){
 			Hashing.generatePasswordHash("Nyello");
 		}
 		Assert.assertTrue(true);
