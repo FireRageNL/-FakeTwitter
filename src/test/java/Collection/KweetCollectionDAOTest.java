@@ -1,3 +1,5 @@
+package Collection;
+
 import Dao.Implementations.Collections.KweetCollectionDAO;
 import Entities.Account;
 import Entities.Kweet;

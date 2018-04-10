@@ -1,3 +1,5 @@
+package Collection;
+
 import Dao.Implementations.Collections.UserCollectionDAO;
 import Entities.Account;
 import org.junit.Before;

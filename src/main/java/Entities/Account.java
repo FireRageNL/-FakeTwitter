@@ -37,6 +37,8 @@ public class Account implements Serializable {
 
     private Date LastLogin;
 
+    private UserRole role;
+
 
     public Account(){
         //Beautiful empty constructor for JPA
@@ -125,5 +127,14 @@ public class Account implements Serializable {
 
     public void setLastLogin(Date lastLogin) {
         LastLogin = lastLogin;
+    }
+
+
+    public UserRole getRole() {
+        return role;
+    }
+
+    public void setRole(UserRole role) {
+        this.role = role;
     }
 }

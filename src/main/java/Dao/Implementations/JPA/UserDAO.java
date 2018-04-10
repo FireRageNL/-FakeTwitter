@@ -1,6 +1,5 @@
 package Dao.Implementations.JPA;
 
-import Dao.Implementations.JPA.GenericDAO;
 import Dao.Interfaces.IUserDAO;
 import Dao.Interfaces.KwetterJPA;
 import Entities.Account;

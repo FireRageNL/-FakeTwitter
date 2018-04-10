@@ -19,9 +19,9 @@ public  class Hashing {
 		SecretKeyFactory skf = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
 		byte[] hash = skf.generateSecret(spec).getEncoded();
 
-		String output = iterations + ":" + toHex(salt) + ":" + toHex(hash);
+		return  iterations + ":" + toHex(salt) + ":" + toHex(hash);
 
-		return output;
+
 	}
 
 
@@ -46,7 +46,7 @@ public  class Hashing {
 	}
 
 
-	private static byte[] fromHex(String hex) throws NoSuchAlgorithmException
+	private static byte[] fromHex(String hex)
 	{
 		byte[] bytes = new byte[hex.length() / 2];
 		for(int i = 0; i<bytes.length ;i++)

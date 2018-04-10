@@ -18,4 +18,6 @@ public interface IUserLogic {
 
 	void deleteFollower(Account toEdit, Account removeFollower);
 
+	boolean loginUser(String username, String password) throws InvalidKeySpecException, NoSuchAlgorithmException;
+
 }
