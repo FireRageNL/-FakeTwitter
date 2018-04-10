@@ -31,11 +31,11 @@ public class Account implements Serializable {
     @ManyToMany(cascade = CascadeType.ALL)
     private List<Account> follwing;
 
-    private String Biography;
+    private String biography;
 
-    private String Location;
+    private String location;
 
-    private Date LastLogin;
+    private Date lastLogin;
 
     private UserRole role;
 
@@ -106,27 +106,27 @@ public class Account implements Serializable {
     }
 
     public String getBiography() {
-        return Biography;
+        return biography;
     }
 
     public void setBiography(String biography) {
-        Biography = biography;
+        this.biography = biography;
     }
 
     public String getLocation() {
-        return Location;
+        return location;
     }
 
     public void setLocation(String location) {
-        Location = location;
+        this.location = location;
     }
 
     public Date getLastLogin() {
-        return LastLogin;
+        return lastLogin;
     }
 
     public void setLastLogin(Date lastLogin) {
-        LastLogin = lastLogin;
+        this.lastLogin = lastLogin;
     }
 
 

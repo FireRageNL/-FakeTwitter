@@ -9,7 +9,6 @@ import Logic.Utilities.Hashing;
 import javax.inject.Inject;
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class UserLogic implements IUserLogic {

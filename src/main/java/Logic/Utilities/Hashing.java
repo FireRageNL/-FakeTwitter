@@ -2,13 +2,19 @@ package Logic.Utilities;
 
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
+import javax.ejb.Singleton;
 import java.math.BigInteger;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
 
 
+@Singleton
 public  class Hashing {
+
+	private Hashing(){
+		//Private constructor so its all nice and hidden
+	}
 
 	public static String generatePasswordHash(String password) throws NoSuchAlgorithmException, InvalidKeySpecException {
 
