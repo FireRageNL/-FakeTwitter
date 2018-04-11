@@ -20,7 +20,9 @@ public class Kweet implements Serializable {
 	@OneToMany
 	private List<Account> mentions;
 
-	public Kweet(Account account) {
+	public Kweet(String messageContents, Account owner) {
+		this.messageContents = messageContents;
+		this.owner = owner;
 	}
 
 	public Kweet() {

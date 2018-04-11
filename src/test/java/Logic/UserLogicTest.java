@@ -3,6 +3,8 @@ package Logic;
 import Dao.Interfaces.IUserDAO;
 import Entities.Account;
 import Logic.Implementations.UserLogic;
+import Logic.Utilities.Hashing;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -38,5 +40,19 @@ public class UserLogicTest {
 		Account added = ul.addUserToCollection(account1);
 
 		verify(userDAO, Mockito.times(1)).add(account1);
+	}
+
+	@Test
+	public void VerifyPassword_CorrectPassword_ReturnsTrue() throws InvalidKeySpecException, NoSuchAlgorithmException {
+		String passwordHash = Hashing.generatePasswordHash("test");
+
+		Assert.assertTrue(ul.verifyUserPassword(passwordHash,"test"));
+	}
+
+	@Test
+	public void VerifyPassword_IncorrectPassword_ReturnsFalse() throws InvalidKeySpecException, NoSuchAlgorithmException {
+		String passwordHash = Hashing.generatePasswordHash("CanYouDoThis");
+
+		Assert.assertFalse(ul.verifyUserPassword(passwordHash,"Only399"));
 	}
 }

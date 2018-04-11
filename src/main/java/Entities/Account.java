@@ -129,7 +129,6 @@ public class Account implements Serializable {
         this.lastLogin = lastLogin;
     }
 
-
     public UserRole getRole() {
         return role;
     }
