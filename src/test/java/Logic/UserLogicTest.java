@@ -1,4 +1,4 @@
-package Collection;
+package Logic;
 
 import Dao.Interfaces.IUserDAO;
 import Entities.Account;
