@@ -44,4 +44,29 @@ public class TrendCollectionDAOTest {
 		Assert.assertNull(trendDao.findById(100));
 	}
 
+	@Test
+	public void AddNewTrend_FilledinTrend_ReturnsTrend(){
+		Trend t3 = new Trend(3,"CanYouDoThis",new ArrayList<>());
+
+		Trend added = trendDao.add(t3);
+
+		Assert.assertEquals(added.getName(),"CanYouDoThis");
+
+	}
+
+	@Test
+	public void DeleteTrend_TrendInDatabase_ReturnsNullOnFind(){
+		Trend toDelete = trendDao.findById(1);
+
+		trendDao.delete(toDelete);
+
+		Assert.assertNull(trendDao.findById(1));
+	}
+
+	@Test
+	public void DeleteTrendById_TrendInDatabase_ReturnsNullOnFindByID(){
+		trendDao.deleteById(1);
+
+		Assert.assertNull(trendDao.findById(1));
+	}
 }
