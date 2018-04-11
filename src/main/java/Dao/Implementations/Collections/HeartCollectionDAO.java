@@ -3,6 +3,7 @@ package Dao.Implementations.Collections;
 import Dao.Interfaces.IHeartDAO;
 import Entities.Heart;
 
+import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class HeartCollectionDAO implements IHeartDAO {
@@ -62,4 +63,9 @@ public class HeartCollectionDAO implements IHeartDAO {
 			}
 		}
 		return null;	}
+
+	@Override
+	public List<Heart> getAll() {
+		return hearts;
+	}
 }

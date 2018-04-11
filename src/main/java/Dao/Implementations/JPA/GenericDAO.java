@@ -6,6 +6,8 @@ import Dao.Interfaces.KwetterJPA;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import java.util.List;
 
 
 @Stateless
@@ -37,5 +39,11 @@ public class GenericDAO<T> implements IGenericDAO<T> {
 
     public T update(T object){
         return em.merge(object);
+    }
+
+    @Override
+    public List<T> getAll() {
+        Query q = em.createQuery("SELECT a FROM Account a");
+        return q.getResultList();
     }
 }

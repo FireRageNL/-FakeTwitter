@@ -1,6 +1,8 @@
 package Entities;
 
 import javax.inject.Named;
+import javax.json.Json;
+import javax.json.JsonObject;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import java.io.Serializable;
@@ -29,7 +31,7 @@ public class Account implements Serializable {
     private List<Account> followers;
 
     @ManyToMany(cascade = CascadeType.ALL)
-    private List<Account> follwing;
+    private List<Account> following;
 
     private String biography;
 
@@ -55,6 +57,17 @@ public class Account implements Serializable {
         username = name;
         email = mail;
         id = userid;
+    }
+
+    public JsonObject convertToJSON(){
+        return Json.createObjectBuilder()
+                .add("id",this.id)
+                .add("username",this.username)
+                .add("email",this.email)
+                .add("followers",this.followers.size())
+                .add("following",this.following.size())
+                .add("biography",this.biography)
+                .build();
     }
 
     public int getId() {
@@ -97,12 +110,12 @@ public class Account implements Serializable {
         this.followers = followers;
     }
 
-    public List<Account> getFollwing() {
-        return follwing;
+    public List<Account> getFollowing() {
+        return following;
     }
 
-    public void setFollwing(List<Account> follwing) {
-        this.follwing = follwing;
+    public void setFollowing(List<Account> follwing) {
+        this.following = follwing;
     }
 
     public String getBiography() {

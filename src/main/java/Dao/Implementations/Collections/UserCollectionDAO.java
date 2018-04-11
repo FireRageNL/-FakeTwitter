@@ -3,6 +3,7 @@ package Dao.Implementations.Collections;
 import Dao.Interfaces.IUserDAO;
 import Entities.Account;
 
+import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class UserCollectionDAO implements IUserDAO {
@@ -47,6 +48,11 @@ public class UserCollectionDAO implements IUserDAO {
 			}
 		}
 		return null;
+	}
+
+	@Override
+	public List<Account> getAll() {
+		return accountList;
 	}
 
 	public int countUsers() {

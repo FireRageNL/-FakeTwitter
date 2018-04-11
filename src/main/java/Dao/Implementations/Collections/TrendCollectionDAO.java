@@ -3,6 +3,7 @@ package Dao.Implementations.Collections;
 import Dao.Interfaces.ITrendDAO;
 import Entities.Trend;
 
+import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class TrendCollectionDAO implements ITrendDAO {
@@ -51,5 +52,10 @@ public class TrendCollectionDAO implements ITrendDAO {
 			}
 		}
 		return null;
+	}
+
+	@Override
+	public List<Trend> getAll() {
+		return trends;
 	}
 }

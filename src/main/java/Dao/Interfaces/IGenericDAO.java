@@ -1,5 +1,7 @@
 package Dao.Interfaces;
 
+import java.util.List;
+
 public interface IGenericDAO<T> {
 
     T add(T object);
@@ -11,5 +13,7 @@ public interface IGenericDAO<T> {
     T findById(int id);
 
     T update(T object);
+
+    List<T> getAll();
 
 }

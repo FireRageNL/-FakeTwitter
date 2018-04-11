@@ -7,8 +7,10 @@ import Logic.Interfaces.IUserLogic;
 import Logic.Utilities.Hashing;
 
 import javax.inject.Inject;
+import javax.json.JsonObject;
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserLogic implements IUserLogic {
@@ -38,6 +40,11 @@ public class UserLogic implements IUserLogic {
 	}
 
 	@Override
+	public Account getUserByID(int id) {
+		return userDAO.findById(id);
+	}
+
+	@Override
 	public boolean verifyUserPassword(String passwordHash, String password) throws InvalidKeySpecException, NoSuchAlgorithmException {
 		return Hashing.verifyPassword(passwordHash,password);
 	}
@@ -63,6 +70,20 @@ public class UserLogic implements IUserLogic {
 	public boolean loginUser(String username, String password) throws InvalidKeySpecException, NoSuchAlgorithmException {
 		Account toLogin = getUserFromDatabase(username);
 		return verifyUserPassword(toLogin.getPasswordHash(),password);
+	}
+
+	@Override
+	public List<Account> getAllUsersFromDatabase() {
+		return userDAO.getAll();
+	}
+
+	@Override
+	public List<JsonObject> convertListToJSON(List<Account> accounts) {
+		List<JsonObject> toReturn = new ArrayList<>();
+		for(Account a : accounts){
+			toReturn.add(a.convertToJSON());
+		}
+		return toReturn;
 	}
 
 }

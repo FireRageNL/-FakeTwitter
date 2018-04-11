@@ -70,3 +70,6 @@ fabric.properties
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+target/generated-sources/annotations/Entities/Trend_.java
+target/generated-sources/annotations/Entities/Account_.java
+target/generated-sources/annotations/Entities/Heart_.java
