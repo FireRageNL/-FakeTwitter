@@ -9,6 +9,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class TrendCollectionDAOTest {
 
@@ -45,12 +46,19 @@ public class TrendCollectionDAOTest {
 	}
 
 	@Test
+	public void GetAllTrends_TwoInDatabase_ReturnsTwo(){
+		List<Trend> allTrends = trendDao.getAll();
+
+		Assert.assertEquals(2,allTrends.size());
+	}
+
+	@Test
 	public void AddNewTrend_FilledinTrend_ReturnsTrend(){
 		Trend t3 = new Trend(3,"CanYouDoThis",new ArrayList<>());
 
 		Trend added = trendDao.add(t3);
 
-		Assert.assertEquals(added.getName(),"CanYouDoThis");
+		Assert.assertEquals("CanYouDoThis",added.getName());
 
 	}
 

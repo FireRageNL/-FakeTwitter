@@ -1,3 +1,5 @@
+package Utilities;
+
 import Logic.Utilities.Hashing;
 import org.junit.Assert;
 import org.junit.Test;

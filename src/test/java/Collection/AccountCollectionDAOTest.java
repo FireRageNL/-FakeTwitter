@@ -6,6 +6,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.Assert;
 
+import java.util.List;
+
 
 public class AccountCollectionDAOTest {
 
@@ -28,6 +30,12 @@ public class AccountCollectionDAOTest {
 		Assert.assertEquals("Test",toFind.getUsername());
 	}
 
+	@Test
+	public void GetAll_TwoInDatabase_ReturnsTwo(){
+		List<Account> allAcc = uDAO.getAll();
+
+		Assert.assertEquals(2,allAcc.size());
+	}
 	@Test
 	public void FindById_IdNotInCollection_ReturnsNull(){
 		Assert.assertNull(uDAO.findById(3));
