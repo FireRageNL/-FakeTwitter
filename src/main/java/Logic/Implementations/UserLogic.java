@@ -19,10 +19,18 @@ public class UserLogic implements IUserLogic {
 	@KwetterJPA
 	private IUserDAO userDAO;
 
-	public Account addUserToCollection(String username, String password, String email, int id) throws InvalidKeySpecException, NoSuchAlgorithmException {
-		String pwHash = Hashing.generatePasswordHash(password);
-		Account newAccount = new Account(username,pwHash,email,id);
-		return userDAO.add(newAccount);
+	private UserLogic(){
+		//Empty constructor for ejb
+	}
+	public UserLogic(IUserDAO dao){
+		this.userDAO = dao;
+	}
+
+	@Override
+	public Account addUserToCollection(Account accountToAdd) throws InvalidKeySpecException, NoSuchAlgorithmException {
+		String pwHash = Hashing.generatePasswordHash(accountToAdd.getPasswordHash());
+		accountToAdd.setPasswordHash(pwHash);
+		return userDAO.add(accountToAdd);
 	}
 
 	public Account getUserFromDatabase(String username) {

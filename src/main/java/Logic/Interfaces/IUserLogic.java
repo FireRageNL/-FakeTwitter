@@ -8,7 +8,7 @@ import java.security.spec.InvalidKeySpecException;
 
 public interface IUserLogic {
 
-	Account addUserToCollection(String username, String password, String email, int id) throws InvalidKeySpecException, NoSuchAlgorithmException;
+	Account addUserToCollection(Account accountToAdd) throws InvalidKeySpecException, NoSuchAlgorithmException;
 
 	Account getUserFromDatabase(String username);
 
