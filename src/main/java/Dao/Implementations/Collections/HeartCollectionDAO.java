@@ -64,8 +64,4 @@ public class HeartCollectionDAO implements IHeartDAO {
 		}
 		return null;	}
 
-	@Override
-	public List<Heart> getAll() {
-		return hearts;
-	}
 }

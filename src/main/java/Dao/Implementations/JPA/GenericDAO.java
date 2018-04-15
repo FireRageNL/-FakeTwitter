@@ -7,6 +7,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
 
@@ -19,6 +20,10 @@ public class GenericDAO<T> implements IGenericDAO<T> {
 
     private Class<T> type;
 
+    public GenericDAO(){
+        ParameterizedType genericSuperClass = (ParameterizedType) getClass().getGenericSuperclass();
+        this.type = (Class<T>) genericSuperClass.getActualTypeArguments()[0];
+    }
     public T add(T object) {
      em.persist(object);
      return object;
@@ -41,9 +46,4 @@ public class GenericDAO<T> implements IGenericDAO<T> {
         return em.merge(object);
     }
 
-    @Override
-    public List<T> getAll() {
-        Query q = em.createQuery("SELECT a FROM Account a");
-        return q.getResultList();
-    }
 }

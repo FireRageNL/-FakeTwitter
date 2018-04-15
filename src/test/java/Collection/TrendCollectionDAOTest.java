@@ -46,13 +46,6 @@ public class TrendCollectionDAOTest {
 	}
 
 	@Test
-	public void GetAllTrends_TwoInDatabase_ReturnsTwo(){
-		List<Trend> allTrends = trendDao.getAll();
-
-		Assert.assertEquals(2,allTrends.size());
-	}
-
-	@Test
 	public void AddNewTrend_FilledinTrend_ReturnsTrend(){
 		Trend t3 = new Trend(3,"CanYouDoThis",new ArrayList<>());
 

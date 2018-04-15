@@ -1,11 +1,13 @@
 package Entities;
 
 
+import javax.inject.Named;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
 @Entity
+@Named
 public class Kweet implements Serializable {
 
 	@Id
@@ -61,6 +63,7 @@ public class Kweet implements Serializable {
 	public void setId(int id){
 		this.id = id;
 	}
+
 	public Account getOwner(){
 		return owner;
 	}

@@ -41,12 +41,6 @@ public class KweetCollectionDAOTest {
 		Assert.assertNull(kweetDAO.findById(33));
 	}
 
-	@Test
-	public void GetAllKweets_ThreeKweetsInDatabase_Returns3(){
-		List<Kweet> allKweets = kweetDAO.getAll();
-
-		Assert.assertEquals(3,allKweets.size());
-	}
 
 	@Test
 	public void GetKweetsByUser_TwoInDb_ReturnsListOfTwo(){

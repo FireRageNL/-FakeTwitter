@@ -14,6 +14,4 @@ public interface IGenericDAO<T> {
 
     T update(T object);
 
-    List<T> getAll();
-
 }

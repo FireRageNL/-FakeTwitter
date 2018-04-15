@@ -66,9 +66,4 @@ public class KweetCollectionDAO implements IKweetDAO {
 		}
 		return null;
 	}
-
-	@Override
-	public List<Kweet> getAll() {
-		return kweets;
-	}
 }

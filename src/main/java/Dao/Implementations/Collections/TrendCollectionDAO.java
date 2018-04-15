@@ -53,9 +53,4 @@ public class TrendCollectionDAO implements ITrendDAO {
 		}
 		return null;
 	}
-
-	@Override
-	public List<Trend> getAll() {
-		return trends;
-	}
 }

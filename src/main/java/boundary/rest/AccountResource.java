@@ -7,8 +7,7 @@ import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.security.NoSuchAlgorithmException;
-import java.security.spec.InvalidKeySpecException;
+
 import java.util.List;
 
 @Path("account")
@@ -39,6 +38,28 @@ public class AccountResource {
 			e.printStackTrace();
 		}
 		return account;
+	}
+
+	@GET
+	@Path("{id}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getAccountById(@PathParam("id") int id){
+		Account usr = ul.getUserByID(id);
+		if(usr != null) {
+			return Response.ok(usr.convertToJSON()).build();
+		}
+		return Response.status(Response.Status.NOT_FOUND).build();
+	}
+
+	@GET
+	@Path("search/{username}")
+	public Response searchAccountByUsername(@PathParam("username") String username){
+		Account usr = ul.getUserFromDatabase(username);
+		if(usr!= null){
+			return Response.ok(usr.convertToJSON()).build();
+		}
+		return Response.status(Response.Status.NOT_FOUND).build();
+
 	}
 
 }
