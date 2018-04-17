@@ -32,6 +32,7 @@ public class UserLogic implements IUserLogic {
 	public Account addUserToCollection(Account accountToAdd) throws InvalidKeySpecException, NoSuchAlgorithmException {
 		String pwHash = Hashing.generatePasswordHash(accountToAdd.getPasswordHash());
 		accountToAdd.setPasswordHash(pwHash);
+		accountToAdd.setBiography("I am new here!");
 		return userDAO.add(accountToAdd);
 	}
 

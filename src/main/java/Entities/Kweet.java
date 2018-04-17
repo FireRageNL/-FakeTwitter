@@ -22,6 +22,9 @@ public class Kweet implements Serializable {
 	@OneToMany
 	private List<Account> mentions;
 
+	@ManyToMany
+	private List<Trend> trends;
+
 	public Kweet(String messageContents, Account owner) {
 		this.messageContents = messageContents;
 		this.owner = owner;
@@ -68,4 +71,11 @@ public class Kweet implements Serializable {
 		return owner;
 	}
 
+	public List<Trend> getTrends() {
+		return trends;
+	}
+
+	public void setTrends(List<Trend> trends) {
+		this.trends = trends;
+	}
 }

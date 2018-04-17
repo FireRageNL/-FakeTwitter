@@ -18,7 +18,7 @@ public class Trend implements Serializable {
 	@Column(unique = true)
 	private String name;
 
-	@OneToMany
+	@ManyToMany
 	private List<Kweet> kweets;
 
 	public Trend(){

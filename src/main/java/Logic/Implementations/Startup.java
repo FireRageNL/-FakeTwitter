@@ -22,9 +22,12 @@ public class Startup {
 	@PostConstruct
 	public void dataInit() {
 		try {
-			Account testAccount = new Account("Hello","test","test@email.com");
+			Account testAccount = new Account("TestAccount1","test","test@email.com");
+			Account testAccount2 = new Account("TestAccount2","test","test@email.nl");
 			testAccount.setBiography("Testing!");
+			testAccount2.setBiography("Teeesting!");
 			usrLogic.addUserToCollection(testAccount);
+			usrLogic.addUserToCollection(testAccount2);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

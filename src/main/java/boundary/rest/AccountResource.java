@@ -21,23 +21,33 @@ public class AccountResource {
 	@Produces({MediaType.APPLICATION_JSON})
 	public Response getAllAccounts(){
 		List<Account> accounts = ul.getAllUsersFromDatabase();
-		return Response.ok(ul.convertListToJSON(accounts)).build();
+		return Response.ok(ul.convertListToJSON(accounts)).header("Access-Control-Allow-Origin", "*").build();
+	}
+
+	@OPTIONS
+	@Path("createUser")
+	public Response optionsResponse(){
+		return Response.status(200).header("Allow","OPTIONS, POST").header("Access-Control-Allow-Origin", "*")
+				.header("Content-Type", MediaType.APPLICATION_JSON)
+				.header("Content-Length", "0")
+				.header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept")
+				.build();
 	}
 
 	@POST
 	@Path("createUser")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public Account createAccount(Account account) {
+	public Response createAccount(Account account) {
 		if (account == null) {
-			throw new WebApplicationException(Response.Status.NOT_FOUND);
+			Response.status(Response.Status.NOT_FOUND).header("Access-Control-Allow-Origin", "*").build();
 		}
 		try {
 			ul.addUserToCollection(account);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return account;
+		return Response.ok(account.convertToJSON()).header("Access-Control-Allow-Origin", "*").build();
 	}
 
 	@GET
@@ -46,9 +56,9 @@ public class AccountResource {
 	public Response getAccountById(@PathParam("id") int id){
 		Account usr = ul.getUserByID(id);
 		if(usr != null) {
-			return Response.ok(usr.convertToJSON()).build();
+			return Response.ok(usr.convertToJSON()).header("Access-Control-Allow-Origin", "*").build();
 		}
-		return Response.status(Response.Status.NOT_FOUND).build();
+		return Response.status(Response.Status.NOT_FOUND).header("Access-Control-Allow-Origin", "*").build();
 	}
 
 	@GET
@@ -56,9 +66,9 @@ public class AccountResource {
 	public Response searchAccountByUsername(@PathParam("username") String username){
 		Account usr = ul.getUserFromDatabase(username);
 		if(usr!= null){
-			return Response.ok(usr.convertToJSON()).build();
+			return Response.ok(usr.convertToJSON()).header("Access-Control-Allow-Origin", "*").build();
 		}
-		return Response.status(Response.Status.NOT_FOUND).build();
+		return Response.status(Response.Status.NOT_FOUND).header("Access-Control-Allow-Origin", "*").build();
 
 	}
 
