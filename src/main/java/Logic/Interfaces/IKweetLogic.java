@@ -2,6 +2,7 @@ package Logic.Interfaces;
 
 import Entities.Kweet;
 
+import javax.json.JsonObject;
 import java.util.List;
 
 public interface IKweetLogic {
@@ -11,4 +12,7 @@ public interface IKweetLogic {
 	Kweet getKweetById(int id);
 
 	List<Kweet> getAllKweetsFromUser(String username);
+
+	List<JsonObject> convertListToJSON(List<Kweet> kweets);
+
 }

@@ -6,6 +6,8 @@ import Entities.Kweet;
 import Logic.Interfaces.IKweetLogic;
 
 import javax.inject.Inject;
+import javax.json.JsonObject;
+import java.util.ArrayList;
 import java.util.List;
 
 public class KweetLogic implements IKweetLogic {
@@ -35,6 +37,15 @@ public class KweetLogic implements IKweetLogic {
 	@Override
 	public List<Kweet> getAllKweetsFromUser(String username) {
 		return kweetDAO.getAllMessagesFromUser(username);
+	}
+
+	@Override
+	public List<JsonObject> convertListToJSON(List<Kweet> kweets) {
+		List<JsonObject> toReturn = new ArrayList<>();
+		for(Kweet k : kweets){
+			toReturn.add(k.convertToJson());
+		}
+		return toReturn;
 	}
 
 

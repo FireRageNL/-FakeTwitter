@@ -27,11 +27,7 @@ public class AccountResource {
 	@OPTIONS
 	@Path("createUser")
 	public Response optionsResponse(){
-		return Response.status(200).header("Allow","OPTIONS, POST").header("Access-Control-Allow-Origin", "*")
-				.header("Content-Type", MediaType.APPLICATION_JSON)
-				.header("Content-Length", "0")
-				.header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept")
-				.build();
+		return getOptionsResponse("OPTIONS, POST");
 	}
 
 	@POST
@@ -40,7 +36,7 @@ public class AccountResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response createAccount(Account account) {
 		if (account == null) {
-			Response.status(Response.Status.NOT_FOUND).header("Access-Control-Allow-Origin", "*").build();
+			return Response.status(Response.Status.NOT_FOUND).header("Access-Control-Allow-Origin", "*").build();
 		}
 		try {
 			ul.addUserToCollection(account);
@@ -69,7 +65,14 @@ public class AccountResource {
 			return Response.ok(usr.convertToJSON()).header("Access-Control-Allow-Origin", "*").build();
 		}
 		return Response.status(Response.Status.NOT_FOUND).header("Access-Control-Allow-Origin", "*").build();
+	}
 
+
+	public Response getOptionsResponse(String Options){
+		return Response.status(200).header("Allow",Options).header("Access-Control-Allow-Origin", "*")
+				.header("Content-Length", "0")
+				.header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept")
+				.build();
 	}
 
 }

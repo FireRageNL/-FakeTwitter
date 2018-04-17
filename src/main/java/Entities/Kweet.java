@@ -2,12 +2,15 @@ package Entities;
 
 
 import javax.inject.Named;
+import javax.json.Json;
+import javax.json.JsonObject;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
 @Entity
 @Named
+@NamedQuery(name = "kweet.findKweetBy", query = "SELECT m FROM Kweet m WHERE m.owner.username = :name")
 public class Kweet implements Serializable {
 
 	@Id
@@ -16,7 +19,7 @@ public class Kweet implements Serializable {
 
 	private String messageContents;
 
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER)
 	private Account owner;
 
 	@OneToMany
@@ -37,6 +40,14 @@ public class Kweet implements Serializable {
 		this.messageContents = messageContents;
 		this.owner = owner;
 		this.id = id;
+	}
+
+	public JsonObject convertToJson(){
+		return Json.createObjectBuilder()
+				.add("id",this.id)
+				.add("owner", this.owner.convertToJSON())
+				.add("messageContents",this.messageContents)
+				.build();
 	}
 
 	public String getMessageContents() {
