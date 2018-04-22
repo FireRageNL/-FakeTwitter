@@ -6,17 +6,16 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.SignatureException;
-import io.jsonwebtoken.impl.crypto.MacProvider;
 
-import java.security.Key;
 
 public class JWTTokenLogic implements IJWTToken {
 
-	Key key = MacProvider.generateKey();
+	static String key = "b858b430e82c39965277796185c4272398ffd1f47cbdd12a398f4d91c9ee90cf";
 
 
 	@Override
 	public String EncodeToken(String username) {
+		System.out.print(key);
 		return Jwts.builder().setSubject("login").signWith(SignatureAlgorithm.HS512, key).claim("username", username).compact();
 	}
 
@@ -24,7 +23,8 @@ public class JWTTokenLogic implements IJWTToken {
 	public Boolean CheckIfTokenIsTrusted(String jwsToken) {
 		try{
 		Claims claims = Jwts.parser().setSigningKey(key).parseClaimsJws(jwsToken).getBody();
-		if (claims.getSubject() == "login") {
+		System.out.print(claims.getSubject());
+		if (claims.getSubject().equals("login")) {
 			return true;
 		}
 		return false;
