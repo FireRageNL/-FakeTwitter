@@ -11,6 +11,7 @@ import java.util.List;
 
 @Entity
 @Named
+@NamedQuery(name = "account.findUser", query = "SELECT a FROM Account a WHERE a.username = :name")
 public class Account implements Serializable {
 
     @Id

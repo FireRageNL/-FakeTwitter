@@ -2,6 +2,7 @@ package boundary.rest;
 
 import Entities.Account;
 import Logic.Implementations.UserLogic;
+import Logic.Utilities.RestHelper;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -27,7 +28,7 @@ public class AccountResource {
 	@OPTIONS
 	@Path("createUser")
 	public Response optionsResponse(){
-		return getOptionsResponse("OPTIONS, POST");
+		return RestHelper.getOptionsResponse("OPTIONS, POST");
 	}
 
 	@POST
@@ -68,11 +69,6 @@ public class AccountResource {
 	}
 
 
-	public Response getOptionsResponse(String Options){
-		return Response.status(200).header("Allow",Options).header("Access-Control-Allow-Origin", "*")
-				.header("Content-Length", "0")
-				.header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept")
-				.build();
-	}
+
 
 }

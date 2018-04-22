@@ -5,7 +5,9 @@ import Dao.Interfaces.KwetterJPA;
 import Entities.Account;
 
 import javax.ejb.Stateless;
+import javax.persistence.NoResultException;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Stateless
@@ -18,7 +20,15 @@ public class UserDAO extends GenericDAO<Account> implements IUserDAO {
 	}
 
 	public Account findByUsername(String username) {
-		return null;
+		try{
+			TypedQuery<Account> query = em.createNamedQuery("account.findUser",Account.class);
+			query.setParameter("name",username);
+			return query.getSingleResult();
+		}
+		catch(NoResultException e) {
+			return null;
+		}
+
 	}
 
 	public List<Account> getAll() {

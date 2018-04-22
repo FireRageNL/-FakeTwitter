@@ -70,6 +70,9 @@ public class UserLogic implements IUserLogic {
 	@Override
 	public boolean loginUser(String username, String password) throws InvalidKeySpecException, NoSuchAlgorithmException {
 		Account toLogin = getUserFromDatabase(username);
+		if(toLogin == null){
+			return false;
+		}
 		return verifyUserPassword(toLogin.getPasswordHash(),password);
 	}
 
