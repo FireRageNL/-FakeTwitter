@@ -29,7 +29,7 @@ public class LoginResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response loginResponse(loginModel model) throws InvalidKeySpecException, NoSuchAlgorithmException {
 		if(ul.loginUser(model.getUsername(),model.getPassword())) {
-			return Response.ok(Json.createObjectBuilder().add("Token", tokenLogic.EncodeToken(model.getUsername())).add("valid",1).build()).header("Access-Control-Allow-Origin", "*").build();
+			return Response.ok(Json.createObjectBuilder().add("Token", tokenLogic.EncodeToken(model.getUsername())).add("valid",1).add("username",model.getUsername()).build()).header("Access-Control-Allow-Origin", "*").build();
 		}
 		else{
 			return Response.ok(Json.createObjectBuilder().add("valid",0).build()).header("Access-Control-Allow-Origin", "*").build();
