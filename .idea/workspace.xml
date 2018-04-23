@@ -8,13 +8,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e96f035-7408-471b-a8fc-1050a43da036" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/boundary/rest/LoginVerificationResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/basic_jee_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/basic_jee_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basic-jee.iml" beforeDir="false" afterPath="$PROJECT_DIR$/basic-jee.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Logic/Implementations/JWTTokenLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Logic/Implementations/JWTTokenLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/rest/LoginResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/rest/LoginResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/boundary/rest/KweetResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boundary/rest/KweetResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Rest/AccountRestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Rest/AccountRestTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Rest/RestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Rest/RestBase.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,32 +29,8 @@
       <file leaf-file-name="AccountResource.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/AccountResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="36" column="19" selection-start-line="36" selection-end-line="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginResource.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/LoginResource.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="33" column="124" selection-start-line="33" selection-start-column="81" selection-end-line="33" selection-end-column="124" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginVerificationResource.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/LoginVerificationResource.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="238">
+              <caret line="27" selection-start-line="27" selection-end-line="31" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,8 +50,20 @@
       <file leaf-file-name="KweetResource.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/KweetResource.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountRestTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Rest/AccountRestTest.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+              <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,20 +71,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JAXRSConfiguration.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/JAXRSConfiguration.java">
+      <file leaf-file-name="WireMockRule.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/github/tomakehurst/wiremock/2.17.0/wiremock-2.17.0.jar!/com/github/tomakehurst/wiremock/junit/WireMockRule.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="202">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JWTTokenLogic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Logic/Implementations/JWTTokenLogic.java">
+      <file leaf-file-name="RestBase.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Rest/RestBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+            <state relative-caret-position="186">
+              <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,29 +92,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserLogic.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="loginModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/restModels/loginModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kweetModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/restModels/kweetModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+              <folding>
+                <element signature="e#334#335#0" expanded="true" />
+                <element signature="e#356#357#0" expanded="true" />
+                <element signature="e#401#402#0" expanded="true" />
+                <element signature="e#432#433#0" expanded="true" />
+                <element signature="e#469#470#0" expanded="true" />
+                <element signature="e#496#497#0" expanded="true" />
+                <element signature="e#551#552#0" expanded="true" />
+                <element signature="e#592#593#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="549">
+              <caret line="69" column="21" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserLogic.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Logic/Implementations/UserLogic.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="428">
               <caret line="71" selection-start-line="71" selection-end-line="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="778">
-              <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Account.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Entities/Account.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="62" column="22" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -153,7 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/Dao/Interfaces/IKweetDAO.java" />
         <option value="$PROJECT_DIR$/src/test/java/KweetCollectionDAOTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/AccountCollectionDAOTest.java" />
         <option value="$PROJECT_DIR$/Dockerfile" />
@@ -176,7 +182,6 @@
         <option value="$PROJECT_DIR$/src/test/java/Collection/AccountCollectionDAOTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Logic/KweetLogicTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Utilities/HashingTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Rest/RestBase.java" />
         <option value="$PROJECT_DIR$/src/main/java/Dao/Interfaces/IGenericDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/Dao/Implementations/JPA/GenericDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/Dao/Interfaces/IUserDAO.java" />
@@ -185,11 +190,9 @@
         <option value="$PROJECT_DIR$/src/main/java/Dao/Implementations/Collections/HeartCollectionDAO.java" />
         <option value="$PROJECT_DIR$/src/test/java/Collection/KweetCollectionDAOTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Collection/TrendCollectionDAOTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Rest/AccountRestTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Entities/Trend.java" />
         <option value="$PROJECT_DIR$/src/main/java/Logic/Interfaces/IKweetLogic.java" />
         <option value="$PROJECT_DIR$/src/main/java/Logic/Implementations/KweetLogic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/boundary/rest/KweetResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/Logic/Implementations/Startup.java" />
         <option value="$PROJECT_DIR$/src/main/java/Entities/Kweet.java" />
         <option value="$PROJECT_DIR$/src/main/java/Dao/Implementations/JPA/KweetDAO.java" />
@@ -202,8 +205,12 @@
         <option value="$PROJECT_DIR$/src/main/java/Logic/Interfaces/IJWTToken.java" />
         <option value="$PROJECT_DIR$/src/main/java/boundary/rest/LoginResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/boundary/rest/LoginVerificationResource.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Logic/Implementations/JWTTokenLogic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/boundary/rest/restModels/kweetModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/boundary/rest/KweetResource.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Rest/AccountRestTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Rest/RestBase.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -248,6 +255,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -444,9 +454,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -480,7 +487,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="GlassFish Server.Glasvis">
+  <component name="RunManager" selected="JUnit.AccountRestTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -1093,43 +1100,44 @@
       <workItem from="1523976774149" duration="9216000" />
       <workItem from="1524422554429" duration="2796000" />
       <workItem from="1524430035118" duration="2419000" />
+      <workItem from="1524462606877" duration="2091000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_basic-jee - 2018.04.12 at 07h 16m 34s.xml">
-      <configuration name="All in basic-jee" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserLogicTest - 2018.04.11 at 07h 53m 57s.xml">
-      <configuration name="UserLogicTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserLogicTest_CreateAccount_FullAcount_AccountAdded - 2018.04.11 at 07h 12m 19s.xml">
-      <configuration name="UserLogicTest.CreateAccount_FullAcount_AccountAdded" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserLogicTest_CreateAccount_FullAcount_AccountAdded - 2018.04.11 at 07h 12m 51s.xml">
-      <configuration name="UserLogicTest.CreateAccount_FullAcount_AccountAdded" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserLogicTest_CreateAccount_FullAcount_AccountAdded - 2018.04.11 at 07h 48m 42s.xml">
-      <configuration name="UserLogicTest.CreateAccount_FullAcount_AccountAdded" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserLogicTest_VerifyPassword_CorrectPassword_ReturnsTrue - 2018.04.11 at 07h 52m 57s.xml">
-      <configuration name="UserLogicTest.VerifyPassword_CorrectPassword_ReturnsTrue" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AccountRestTest_getSpecificAccountById - 2018.04.14 at 17h 24m 19s.xml">
-      <configuration name="AccountRestTest.getSpecificAccountById" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AccountRestTest_getAllAccounts - 2018.04.14 at 17h 24m 33s.xml">
-      <configuration name="AccountRestTest.getAllAccounts" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AccountRestTest - 2018.04.15 at 19h 38m 04s.xml">
+    <history-entry file="AccountRestTest - 2018.04.15 at 19h 39m 55s.xml">
       <configuration name="AccountRestTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AccountRestTest - 2018.04.15 at 19h 39m 55s.xml">
+    <history-entry file="AccountRestTest_getAllAccounts - 2018.04.23 at 08h 05m 15s.xml">
+      <configuration name="AccountRestTest.getAllAccounts" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountRestTest - 2018.04.23 at 08h 06m 00s.xml">
+      <configuration name="AccountRestTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountRestTest - 2018.04.23 at 08h 09m 44s.xml">
+      <configuration name="AccountRestTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountRestTest - 2018.04.23 at 08h 13m 19s.xml">
+      <configuration name="AccountRestTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountRestTest - 2018.04.23 at 08h 13m 48s.xml">
+      <configuration name="AccountRestTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountRestTest - 2018.04.23 at 08h 14m 20s.xml">
+      <configuration name="AccountRestTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountRestTest - 2018.04.23 at 08h 14m 55s.xml">
+      <configuration name="AccountRestTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountRestTest - 2018.04.23 at 08h 16m 50s.xml">
+      <configuration name="AccountRestTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountRestTest - 2018.04.23 at 08h 19m 24s.xml">
       <configuration name="AccountRestTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79759000" />
+    <option name="totallyTimeSpent" value="81850000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1142,6 +1150,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -1165,13 +1174,12 @@
       <window_info anchor="bottom" id="Java Enterprise" order="9" />
       <window_info anchor="right" id="Capture Analysis" order="8" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31842965" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31263617" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32897604" />
       <window_info id="Persistence" order="5" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29104477" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29424307" />
       <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32979852" />
       <window_info anchor="right" id="Theme Preview" order="10" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -1179,6 +1187,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32979852" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1189,24 +1198,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="19" />
+      <option name="time" value="20" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/Interfaces/IKweetDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/Interfaces/IHeartDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Dao/Interfaces/ITrendDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1346,13 +1341,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Rest/RestBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1502,13 +1490,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Rest/AccountRestTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Logic/UserLogicTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1534,13 +1515,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="28" column="40" selection-start-line="28" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/restModels/loginModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1593,37 +1567,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/KweetResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/JAXRSConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/AccountResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="36" column="19" selection-start-line="36" selection-end-line="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Logic/Implementations/Startup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1637,16 +1584,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="778">
-          <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/LoginVerificationResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="221">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1656,8 +1596,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Logic/Implementations/JWTTokenLogic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        <state relative-caret-position="391">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1668,6 +1608,91 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="428">
           <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/restModels/kweetModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding>
+            <element signature="e#334#335#0" expanded="true" />
+            <element signature="e#356#357#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#432#433#0" expanded="true" />
+            <element signature="e#469#470#0" expanded="true" />
+            <element signature="e#496#497#0" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#592#593#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/restModels/loginModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Logic/Implementations/Startup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/AccountResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="27" selection-start-line="27" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/boundary/rest/KweetResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Rest/RestBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Rest/AccountRestTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/tomakehurst/wiremock/2.17.0/wiremock-2.17.0.jar!/com/github/tomakehurst/wiremock/junit/WireMockRule.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="69" column="21" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
         </state>
       </provider>
     </entry>

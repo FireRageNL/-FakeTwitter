@@ -1,12 +1,14 @@
 package boundary.rest;
 
+import Entities.Account;
 import Entities.Kweet;
 import Logic.Implementations.KweetLogic;
+import Logic.Implementations.UserLogic;
+import Logic.Utilities.RestHelper;
+import boundary.rest.restModels.kweetModel;
 
 import javax.inject.Inject;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
+import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
@@ -16,6 +18,9 @@ public class KweetResource {
 	@Inject
 	KweetLogic kl;
 
+	@Inject
+	UserLogic ul;
+
 	@GET
 	@Path("{username}")
 	public Response GetAllKweetsFromUser(@PathParam("username") String username){
@@ -23,4 +28,16 @@ public class KweetResource {
 		return Response.ok(kl.convertListToJSON(allKweets)).header("Access-Control-Allow-Origin", "*").build();
 	}
 
+	@POST
+	public Response postNewKweet(kweetModel model) {
+		Account usr = ul.getUserFromDatabase(model.getUsername());
+		Kweet toPost = new Kweet(model.getKweetContents(),usr);
+		kl.addNewKweet(toPost);
+		return Response.ok().build();
+	}
+
+	@OPTIONS
+	public Response optionsResponse(){
+		return RestHelper.getOptionsResponse("OPTIONS, POST, GET");
+	}
 }

@@ -1,5 +1,6 @@
 package Rest;
 
+
 import org.junit.BeforeClass;
 import io.restassured.RestAssured;
 
@@ -7,11 +8,12 @@ import static io.restassured.RestAssured.*;
 
 public class RestBase {
 
+
 	@BeforeClass
 	public static void Setup(){
 		String port = System.getProperty("server.port");
 		if (port == null) {
-			RestAssured.port = Integer.valueOf(8080);
+			RestAssured.port = Integer.valueOf(8089);
 		}
 		else{
 			RestAssured.port = Integer.valueOf(port);
@@ -29,5 +31,7 @@ public class RestBase {
 			baseHost = "http://localhost";
 		}
 		baseURI = baseHost;
+
 	}
+
 }
