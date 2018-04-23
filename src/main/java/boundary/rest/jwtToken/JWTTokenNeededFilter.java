@@ -18,7 +18,6 @@ import java.io.IOException;
 @Priority(Priorities.AUTHENTICATION)
 public class JWTTokenNeededFilter implements ContainerRequestFilter {
 
-
 	@Inject
 	JWTTokenLogic tokenLogic;
 

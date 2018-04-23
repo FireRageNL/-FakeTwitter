@@ -40,4 +40,9 @@ public class AccountRestTest extends RestBase{
 
 		given().when().get("/api/account/1").then().statusCode(200);
 	}
+
+	@Test
+	public void getAccountByUsername(){
+
+	}
 }

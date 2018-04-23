@@ -31,11 +31,12 @@ public class KweetResource {
 	}
 
 	@POST
+	@JWTTokenNeeded
 	public Response postNewKweet(kweetModel model) {
 		Account usr = ul.getUserFromDatabase(model.getUsername());
 		Kweet toPost = new Kweet(model.getKweetContents(),usr);
 		kl.addNewKweet(toPost);
-		return Response.ok().build();
+		return Response.ok().header("Access-Control-Allow-Origin", "*").build();
 	}
 
 	@OPTIONS

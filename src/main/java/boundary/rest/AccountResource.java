@@ -3,6 +3,7 @@ package boundary.rest;
 import Entities.Account;
 import Logic.Implementations.UserLogic;
 import Logic.Utilities.RestHelper;
+import boundary.rest.jwtToken.JWTTokenNeeded;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -20,10 +21,15 @@ public class AccountResource {
 	@GET
 	@Path("getall")
 	@Produces({MediaType.APPLICATION_JSON})
+	@JWTTokenNeeded
 	public Response getAllAccounts(){
 		List<Account> accounts = ul.getAllUsersFromDatabase();
 		return Response.ok(ul.convertListToJSON(accounts)).header("Access-Control-Allow-Origin", "*").build();
 	}
+
+	@OPTIONS
+	@Path("getall")
+	public Response optionsResponseGetall(){return RestHelper.getOptionsResponse("OPTIONS, POST, GET");}
 
 	@OPTIONS
 	@Path("createUser")
@@ -50,6 +56,7 @@ public class AccountResource {
 	@GET
 	@Path("{id}")
 	@Produces(MediaType.APPLICATION_JSON)
+	@JWTTokenNeeded
 	public Response getAccountById(@PathParam("id") int id){
 		Account usr = ul.getUserByID(id);
 		if(usr != null) {
@@ -60,6 +67,7 @@ public class AccountResource {
 
 	@GET
 	@Path("search/{username}")
+	@JWTTokenNeeded
 	public Response searchAccountByUsername(@PathParam("username") String username){
 		Account usr = ul.getUserFromDatabase(username);
 		if(usr!= null){
