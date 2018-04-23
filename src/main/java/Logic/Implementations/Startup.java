@@ -2,6 +2,8 @@ package Logic.Implementations;
 
 import Entities.Account;
 import Entities.Kweet;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
@@ -16,6 +18,8 @@ public class Startup {
 
 	@Inject
 	KweetLogic weebLogic;
+
+	final Logger logger = LoggerFactory.getLogger(Startup.class);
 
 	public Startup() {
 
@@ -39,7 +43,7 @@ public class Startup {
 			weebLogic.addNewKweet(kweet2);
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			logger.error(e.getMessage());
 		}
 	}
 }

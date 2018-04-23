@@ -2,12 +2,9 @@ package Rest;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
 
-import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.junit.WireMockRule;
 import org.junit.*;
 
-import static com.github.tomakehurst.wiremock.client.WireMock.stubFor;
-import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.wireMockConfig;
 import static io.restassured.RestAssured.given;
 
 public class AccountRestTest extends RestBase{

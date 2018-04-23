@@ -5,6 +5,7 @@ import Entities.Kweet;
 import Logic.Implementations.KweetLogic;
 import Logic.Implementations.UserLogic;
 import Logic.Utilities.RestHelper;
+import boundary.rest.jwtToken.JWTTokenNeeded;
 import boundary.rest.restModels.kweetModel;
 
 import javax.inject.Inject;
@@ -23,6 +24,7 @@ public class KweetResource {
 
 	@GET
 	@Path("{username}")
+	@JWTTokenNeeded
 	public Response GetAllKweetsFromUser(@PathParam("username") String username){
 		List<Kweet> allKweets = kl.getAllKweetsFromUser(username);
 		return Response.ok(kl.convertListToJSON(allKweets)).header("Access-Control-Allow-Origin", "*").build();
@@ -40,4 +42,8 @@ public class KweetResource {
 	public Response optionsResponse(){
 		return RestHelper.getOptionsResponse("OPTIONS, POST, GET");
 	}
+
+	@OPTIONS
+	@Path("{username}")
+	public Response optionsResponseUsername(){ return RestHelper.getOptionsResponse("OPTIONS,POST,GET"); }
 }
