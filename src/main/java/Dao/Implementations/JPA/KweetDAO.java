@@ -6,6 +6,7 @@ import Entities.Kweet;
 
 import javax.ejb.Stateless;
 import javax.persistence.NamedQuery;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
@@ -18,5 +19,11 @@ public class KweetDAO extends GenericDAO<Kweet> implements IKweetDAO {
 		TypedQuery<Kweet> query = em.createNamedQuery("kweet.findKweetBy",Kweet.class);
 		query.setParameter("name",userName);
 		return query.getResultList();
+	}
+
+	@Override
+	public List<Kweet> getAll() {
+		Query q = em.createQuery("SELECT k FROM Kweet k");
+		return q.getResultList();
 	}
 }

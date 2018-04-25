@@ -35,6 +35,11 @@ public class KweetLogic implements IKweetLogic {
 	}
 
 	@Override
+	public List<Kweet> getAllKweets() {
+		return kweetDAO.getAll();
+	}
+
+	@Override
 	public List<Kweet> getAllKweetsFromUser(String username) {
 		return kweetDAO.getAllMessagesFromUser(username);
 	}

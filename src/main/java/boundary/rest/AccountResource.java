@@ -32,6 +32,10 @@ public class AccountResource {
 	public Response optionsResponseGetall(){return RestHelper.getOptionsResponse("OPTIONS, POST, GET");}
 
 	@OPTIONS
+	@Path("search/{username}")
+	public Response optionsResponseSearch(){return RestHelper.getOptionsResponse("OPTIONS,GET");}
+
+	@OPTIONS
 	@Path("createUser")
 	public Response optionsResponse(){
 		return RestHelper.getOptionsResponse("OPTIONS, POST");

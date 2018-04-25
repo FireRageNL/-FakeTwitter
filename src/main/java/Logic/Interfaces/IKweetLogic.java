@@ -11,6 +11,8 @@ public interface IKweetLogic {
 
 	Kweet getKweetById(int id);
 
+	List<Kweet> getAllKweets();
+
 	List<Kweet> getAllKweetsFromUser(String username);
 
 	List<JsonObject> convertListToJSON(List<Kweet> kweets);

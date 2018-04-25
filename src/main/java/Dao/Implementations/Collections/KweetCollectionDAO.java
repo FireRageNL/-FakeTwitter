@@ -24,6 +24,11 @@ public class KweetCollectionDAO implements IKweetDAO {
 	}
 
 	@Override
+	public List<Kweet> getAll() {
+		return kweets;
+	}
+
+	@Override
 	public Kweet add(Kweet object) {
 		kweets.add(object);
 		return object;
