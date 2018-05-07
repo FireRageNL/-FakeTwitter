@@ -28,10 +28,10 @@ public class Account implements Serializable {
     @Email
     private String email;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.PERSIST, mappedBy = "following")
     private List<Account> followers;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany
     private List<Account> following;
 
     private String biography;

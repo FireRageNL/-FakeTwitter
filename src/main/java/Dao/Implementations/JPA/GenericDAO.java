@@ -43,7 +43,8 @@ public class GenericDAO<T> implements IGenericDAO<T> {
     }
 
     public T update(T object){
-        return em.merge(object);
+        T Obj = em.merge(object);
+        return Obj;
     }
 
 }

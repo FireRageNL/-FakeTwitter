@@ -32,7 +32,9 @@ public class UserLogic implements IUserLogic {
 	public Account addUserToCollection(Account accountToAdd) throws InvalidKeySpecException, NoSuchAlgorithmException {
 		String pwHash = Hashing.generatePasswordHash(accountToAdd.getPasswordHash());
 		accountToAdd.setPasswordHash(pwHash);
-		accountToAdd.setBiography("I am new here!");
+		if(accountToAdd.getBiography().length() == 0){
+			accountToAdd.setBiography("I am new here!");
+		}
 		return userDAO.add(accountToAdd);
 	}
 
@@ -54,8 +56,9 @@ public class UserLogic implements IUserLogic {
 	public void addFollower(Account toEdit, Account newFollower) {
 		List<Account> followers = toEdit.getFollowers();
 		followers.add(newFollower);
-		toEdit.setFollowers(followers);
-		userDAO.update(toEdit);
+		toEdit.setFollowing(followers);
+		Account editedAccount = userDAO.update(toEdit);
+		System.out.println(editedAccount.getFollowers().toString());
 
 	}
 
@@ -64,7 +67,8 @@ public class UserLogic implements IUserLogic {
 		List<Account> followers = toEdit.getFollowers();
 		followers.remove(removeFollower);
 		toEdit.setFollowers(followers);
-		userDAO.update(toEdit);
+		Account editedAccount = userDAO.update(toEdit);
+		System.out.println(editedAccount.getFollowers().toString());
 	}
 
 	@Override
