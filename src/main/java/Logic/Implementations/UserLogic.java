@@ -54,21 +54,19 @@ public class UserLogic implements IUserLogic {
 
 	@Override
 	public void addFollower(Account toEdit, Account newFollower) {
-		List<Account> followers = toEdit.getFollowers();
+		List<Account> followers = toEdit.getFollowing();
 		followers.add(newFollower);
 		toEdit.setFollowing(followers);
 		Account editedAccount = userDAO.update(toEdit);
-		System.out.println(editedAccount.getFollowers().toString());
+		System.out.println(editedAccount.getFollowing().toString());
 
 	}
 
 	@Override
 	public void deleteFollower(Account toEdit, Account removeFollower) {
-		List<Account> followers = toEdit.getFollowers();
-		followers.remove(removeFollower);
-		toEdit.setFollowers(followers);
+		toEdit.removeFollower(removeFollower.getUsername());
 		Account editedAccount = userDAO.update(toEdit);
-		System.out.println(editedAccount.getFollowers().toString());
+		System.out.println(editedAccount.getFollowing().toString());
 	}
 
 	@Override

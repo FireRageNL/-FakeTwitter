@@ -28,9 +28,6 @@ public class Account implements Serializable {
     @Email
     private String email;
 
-    @ManyToMany(cascade = CascadeType.PERSIST, mappedBy = "following")
-    private List<Account> followers;
-
     @ManyToMany
     private List<Account> following;
 
@@ -65,7 +62,6 @@ public class Account implements Serializable {
                 .add("id",this.id)
                 .add("username",this.username)
                 .add("email",this.email)
-                .add("followers",this.followers.size())
                 .add("following",this.following.size())
                 .add("biography",this.biography)
                 .build();
@@ -101,14 +97,6 @@ public class Account implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public List<Account> getFollowers() {
-        return followers;
-    }
-
-    public void setFollowers(List<Account> followers) {
-        this.followers = followers;
     }
 
     public List<Account> getFollowing() {
@@ -149,5 +137,16 @@ public class Account implements Serializable {
 
     public void setRole(UserRole role) {
         this.role = role;
+    }
+
+    public void removeFollower(String username) {
+    	Account toRemove = null;
+        for(Account a : following){
+            if(a.getUsername() == username){
+                toRemove = a;
+            }
+        }
+        following.remove(toRemove);
+
     }
 }
