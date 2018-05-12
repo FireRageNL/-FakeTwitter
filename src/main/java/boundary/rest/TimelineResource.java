@@ -15,6 +15,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Response;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @Path("timeline")
@@ -30,6 +31,7 @@ public class TimelineResource {
 	@JWTTokenNeeded
 	public Response GetAllKWeets(){
 		List<Kweet> allKweets = kl.getAllKweets();
+		allKweets.sort(Comparator.comparing(Kweet::getPostDate).reversed());
 		return Response.ok(kl.convertListToJSON(allKweets)).header("Access-Control-Allow-Origin", "*").build();
 	}
 
@@ -43,6 +45,7 @@ public class TimelineResource {
 			allKweets.addAll(kl.getAllKweetsFromUser(a.getUsername()));
 		}
 		allKweets.addAll(kl.getAllKweetsFromUser(username));
+		allKweets.sort(Comparator.comparing(Kweet::getPostDate).reversed());
 		return Response.ok(kl.convertListToJSON(allKweets)).header("Access-Control-Allow-Origin","*").build();
 	}
 

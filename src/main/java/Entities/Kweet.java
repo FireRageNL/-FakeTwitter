@@ -6,6 +6,8 @@ import javax.json.Json;
 import javax.json.JsonObject;
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -28,9 +30,13 @@ public class Kweet implements Serializable {
 	@ManyToMany
 	private List<Trend> trends;
 
-	public Kweet(String messageContents, Account owner) {
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date postDate;
+
+	public Kweet(String messageContents, Account owner, Date postTime) {
 		this.messageContents = messageContents;
 		this.owner = owner;
+		this.postDate = postTime;
 	}
 
 	public Kweet() {
@@ -88,5 +94,13 @@ public class Kweet implements Serializable {
 
 	public void setTrends(List<Trend> trends) {
 		this.trends = trends;
+	}
+
+	public Date getPostDate() {
+		return postDate;
+	}
+
+	public void setPostDate(Date postDate) {
+		this.postDate = postDate;
 	}
 }

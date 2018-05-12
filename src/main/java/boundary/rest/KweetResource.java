@@ -11,6 +11,9 @@ import boundary.rest.restModels.kweetModel;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
+import java.time.LocalDateTime;
+import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 
 @Path("kweet")
@@ -27,6 +30,7 @@ public class KweetResource {
 	@JWTTokenNeeded
 	public Response GetAllKweetsFromUser(@PathParam("username") String username){
 		List<Kweet> allKweets = kl.getAllKweetsFromUser(username);
+		allKweets.sort(Comparator.comparing(Kweet::getPostDate).reversed());
 		return Response.ok(kl.convertListToJSON(allKweets)).header("Access-Control-Allow-Origin", "*").build();
 	}
 
@@ -34,7 +38,7 @@ public class KweetResource {
 	@JWTTokenNeeded
 	public Response postNewKweet(kweetModel model) {
 		Account usr = ul.getUserFromDatabase(model.getUsername());
-		Kweet toPost = new Kweet(model.getKweetContents(),usr);
+		Kweet toPost = new Kweet(model.getKweetContents(),usr,new Date());
 		kl.addNewKweet(toPost);
 		return Response.ok().header("Access-Control-Allow-Origin", "*").build();
 	}
