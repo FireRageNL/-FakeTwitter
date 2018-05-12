@@ -41,8 +41,6 @@ public class Startup {
 
 			usrLogic.addFollower(testAccount2,testAccount);
 
-			Account testing = usrLogic.getUserFromDatabase("TestAccount1");
-
 			Kweet kweet1 = new Kweet("Look at my kweet, my kweet is amazing",testAccount);
 			Kweet kweet2 = new Kweet("I am the master of Kweets :D",testAccount);
 			Kweet kweet3 = new Kweet("Wow what an amazing kweet application",testAccount3);

@@ -6,6 +6,7 @@ import javax.json.JsonObject;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -100,6 +101,9 @@ public class Account implements Serializable {
     }
 
     public List<Account> getFollowing() {
+        if(following == null){
+            following = new ArrayList<>();
+        }
         return following;
     }
 

@@ -10,6 +10,7 @@ import Logic.Implementations.JWTTokenLogic;
 import Logic.Implementations.UserLogic;
 import Logic.Utilities.RestHelper;
 import boundary.rest.restModels.loginModel;
+import websocket.Listner;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
@@ -28,6 +29,9 @@ public class LoginResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response loginResponse(loginModel model) throws InvalidKeySpecException, NoSuchAlgorithmException {
 		if(ul.loginUser(model.getUsername(),model.getPassword())) {
+			if(!Listner.getInstance().getUsers().contains(model.getUsername())){
+				Listner.getInstance().getUsers().add(model.getUsername());
+			}
 			return Response.ok(Json.createObjectBuilder().add("Token", tokenLogic.EncodeToken(model.getUsername())).add("valid",1).add("username",model.getUsername()).build()).header("Access-Control-Allow-Origin", "*").build();
 		}
 		else{

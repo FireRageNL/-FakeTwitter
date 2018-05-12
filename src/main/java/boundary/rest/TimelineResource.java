@@ -42,6 +42,7 @@ public class TimelineResource {
 		for(Account a : acc.getFollowing()){
 			allKweets.addAll(kl.getAllKweetsFromUser(a.getUsername()));
 		}
+		allKweets.addAll(kl.getAllKweetsFromUser(username));
 		return Response.ok(kl.convertListToJSON(allKweets)).header("Access-Control-Allow-Origin","*").build();
 	}
 
