@@ -6,9 +6,13 @@ import Logic.Utilities.RestHelper;
 import boundary.rest.jwtToken.JWTTokenNeeded;
 
 import javax.inject.Inject;
+import javax.json.Json;
+import javax.json.JsonObject;
 import javax.ws.rs.*;
+import javax.ws.rs.core.Link;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriBuilder;
 
 import java.util.List;
 
@@ -80,6 +84,23 @@ public class AccountResource {
 		return Response.status(Response.Status.NOT_FOUND).header("Access-Control-Allow-Origin", "*").build();
 	}
 
+	@GET
+	@Path("jsonUserObject/{username}")
+	public JsonObject getUserJsonObject(@PathParam("username") String username) {
+
+		Account user = ul.getUserFromDatabase(username);
+
+		UriBuilder builder = UriBuilder.fromResource(AccountResource.class)
+				.path(AccountResource.class,"searchAccountByUsername");
+		Link link = Link.fromUri(builder.build(username)).rel("self").build();
+
+		return Json.createObjectBuilder()
+				.add("username", user.getUsername())
+				.add("email",user.getEmail())
+				.add("biography", user.getBiography())
+				.add(link.getRel(), link.getUri().getPath())
+				.build();
+	}
 
 
 
