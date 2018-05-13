@@ -35,7 +35,7 @@ public class Sock {
 		Account usr = ul.getUserFromDatabase(username);
 
 		users.forEach(user -> {
-				Listner.getInstance().getSessionMap().get(user).getAsyncRemote().sendText(message + "Has been posted by " + username);
+				Listner.getInstance().getSessionMap().get(user).getAsyncRemote().sendText("\"" + message + "\" Has been posted by: " + username);
 		});
 	}
 }
