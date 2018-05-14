@@ -58,15 +58,12 @@ public class UserLogic implements IUserLogic {
 		followers.add(newFollower);
 		toEdit.setFollowing(followers);
 		Account editedAccount = userDAO.update(toEdit);
-		System.out.println(editedAccount.getFollowing().toString());
-
 	}
 
 	@Override
 	public void deleteFollower(Account toEdit, Account removeFollower) {
 		toEdit.removeFollower(removeFollower.getUsername());
 		Account editedAccount = userDAO.update(toEdit);
-		System.out.println(editedAccount.getFollowing().toString());
 	}
 
 	@Override
