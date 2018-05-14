@@ -3,7 +3,6 @@ package Dao.Implementations.Collections;
 import Dao.Interfaces.ITrendDAO;
 import Entities.Trend;
 
-import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class TrendCollectionDAO implements ITrendDAO {

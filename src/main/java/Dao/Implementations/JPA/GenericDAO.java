@@ -6,9 +6,7 @@ import Dao.Interfaces.KwetterJPA;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
 import java.lang.reflect.ParameterizedType;
-import java.util.List;
 
 
 @Stateless

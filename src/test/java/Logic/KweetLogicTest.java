@@ -9,8 +9,6 @@ import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import java.time.LocalDateTime;
-import java.util.Calendar;
 import java.util.Date;
 
 import static org.mockito.Mockito.times;

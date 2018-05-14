@@ -1,7 +1,5 @@
 package Entities;
 
-import Logic.Utilities.Hashing;
-
 import javax.inject.Named;
 import javax.persistence.*;
 import java.io.Serializable;

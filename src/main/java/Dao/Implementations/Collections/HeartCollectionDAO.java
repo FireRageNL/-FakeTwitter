@@ -3,7 +3,6 @@ package Dao.Implementations.Collections;
 import Dao.Interfaces.IHeartDAO;
 import Entities.Heart;
 
-import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class HeartCollectionDAO implements IHeartDAO {

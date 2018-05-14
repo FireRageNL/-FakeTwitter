@@ -8,7 +8,6 @@ import org.slf4j.LoggerFactory;
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.inject.Inject;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 @Singleton

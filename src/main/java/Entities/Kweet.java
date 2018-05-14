@@ -6,7 +6,6 @@ import javax.json.Json;
 import javax.json.JsonObject;
 import javax.persistence.*;
 import java.io.Serializable;
-import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 

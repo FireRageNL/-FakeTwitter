@@ -1,7 +1,5 @@
 package Dao.Interfaces;
 
-import java.util.List;
-
 public interface IGenericDAO<T> {
 
     T add(T object);

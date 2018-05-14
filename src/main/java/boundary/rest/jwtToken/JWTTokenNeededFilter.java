@@ -1,7 +1,6 @@
 package boundary.rest.jwtToken;
 
 import Logic.Implementations.JWTTokenLogic;
-import io.jsonwebtoken.Jwts;
 
 import javax.annotation.Priority;
 import javax.inject.Inject;

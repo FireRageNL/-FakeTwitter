@@ -1,6 +1,5 @@
 package Logic.Implementations;
 
-import Entities.Account;
 import Logic.Interfaces.IJWTToken;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
