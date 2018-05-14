@@ -1,10 +1,7 @@
 package Logic.Implementations;
 
 import Logic.Interfaces.IJWTToken;
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
-import io.jsonwebtoken.SignatureException;
+import io.jsonwebtoken.*;
 
 
 public class JWTTokenLogic implements IJWTToken {
@@ -14,7 +11,6 @@ public class JWTTokenLogic implements IJWTToken {
 
 	@Override
 	public String EncodeToken(String username) {
-		System.out.print(key);
 		return Jwts.builder().setSubject("login").signWith(SignatureAlgorithm.HS512, key).claim("username", username).compact();
 	}
 
@@ -22,14 +18,13 @@ public class JWTTokenLogic implements IJWTToken {
 	public Boolean CheckIfTokenIsTrusted(String jwsToken) {
 		try{
 		Claims claims = Jwts.parser().setSigningKey(key).parseClaimsJws(jwsToken).getBody();
-		System.out.print(claims.getSubject());
 		if (claims.getSubject().equals("login")) {
 			return true;
 		}
 		return false;
 
 		}
-		catch(SignatureException e){
+		catch(SignatureException | MalformedJwtException e){
 			return false;
 		}
 	}
