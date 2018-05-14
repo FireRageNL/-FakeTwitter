@@ -1,6 +1,7 @@
 package Logic.Utilities;
 
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriBuilder;
 
 public class RestHelper {
 
@@ -10,5 +11,10 @@ public class RestHelper {
 				.header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept, Authorization")
 				.header("Access-Control-Allow-Methods", Options)
 				.build();
+	}
+
+	public static UriBuilder getUriBuilder(Class resource, String method){
+		return UriBuilder.fromResource(resource)
+				.path(resource,method);
 	}
 }

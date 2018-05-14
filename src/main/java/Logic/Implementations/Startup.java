@@ -42,14 +42,17 @@ public class Startup {
 			testAccount3 = usrLogic.addUserToCollection(testAccount3);
 
 			usrLogic.addFollower(testAccount2,testAccount);
+			usrLogic.addFollower(testAccount2,testAccount3);
 
 			Kweet kweet1 = new Kweet("Look at my kweet, my kweet is amazing",testAccount, new Date());
 			Kweet kweet2 = new Kweet("I am the master of Kweets :D",testAccount, new Date());
 			Kweet kweet3 = new Kweet("Wow what an amazing kweet application",testAccount3, new Date());
+			Kweet kweet4 = new Kweet("KweetWeet",testAccount2,new Date());
 
 			weebLogic.addNewKweet(kweet1);
 			weebLogic.addNewKweet(kweet2);
 			weebLogic.addNewKweet(kweet3);
+			weebLogic.addNewKweet(kweet4);
 
 		} catch (Exception e) {
 			logger.error(e.getMessage());

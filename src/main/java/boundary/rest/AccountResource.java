@@ -90,8 +90,7 @@ public class AccountResource {
 
 		Account user = ul.getUserFromDatabase(username);
 
-		UriBuilder builder = UriBuilder.fromResource(AccountResource.class)
-				.path(AccountResource.class,"searchAccountByUsername");
+		UriBuilder builder = RestHelper.getUriBuilder(AccountResource.class,"searchAccountByUsername");
 		Link link = Link.fromUri(builder.build(username)).rel("self").build();
 
 		return Json.createObjectBuilder()
