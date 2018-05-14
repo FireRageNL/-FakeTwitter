@@ -8,9 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e96f035-7408-471b-a8fc-1050a43da036" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Utilities/JwtTokenTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Logic/Implementations/JWTTokenLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Logic/Implementations/JWTTokenLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utilities/JwtTokenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utilities/JwtTokenTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,8 +81,8 @@
       <file leaf-file-name="JwtTokenTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Utilities/JwtTokenTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="42" column="67" selection-start-line="42" selection-start-column="67" selection-end-line="42" selection-end-column="67" />
+            <state relative-caret-position="337">
+              <caret line="26" column="74" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#198#199#0" expanded="true" />
@@ -442,7 +440,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.JwtTokenTest.CheckTrustedToken_FakeToken_ReturnsFalse">
+  <component name="RunManager" selected="JUnit.JwtTokenTest.GetUsernameFromToken_InvalidToken_ReturnsNull">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -792,6 +790,29 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="JwtTokenTest.GetUsernameFromToken_InvalidToken_ReturnsNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="basic-jee" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Utilities.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Utilities" />
+      <option name="MAIN_CLASS_NAME" value="Utilities.JwtTokenTest" />
+      <option name="METHOD_NAME" value="GetUsernameFromToken_InvalidToken_ReturnsNull" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
     <configuration name="JwtTokenTest.GetUsernameFromToken_ValidToken_ReturnsUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="basic-jee" />
       <extension name="coverage">
@@ -805,29 +826,6 @@
       <option name="PACKAGE_NAME" value="Utilities" />
       <option name="MAIN_CLASS_NAME" value="Utilities.JwtTokenTest" />
       <option name="METHOD_NAME" value="GetUsernameFromToken_ValidToken_ReturnsUsername" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="LoginRestTest.GetLoginEndpointTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="basic-jee" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Rest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Rest" />
-      <option name="MAIN_CLASS_NAME" value="Rest.LoginRestTest" />
-      <option name="METHOD_NAME" value="GetLoginEndpointTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1011,19 +1009,19 @@
     </configuration>
     <list>
       <item itemvalue="GlassFish Server.Glasvis" />
-      <item itemvalue="JUnit.LoginRestTest.GetLoginEndpointTest" />
       <item itemvalue="JUnit.UserLogicTest.CreateAccount_FullAcount_AccountAdded" />
       <item itemvalue="JUnit.JwtTokenTest.GetUsernameFromToken_ValidToken_ReturnsUsername" />
       <item itemvalue="JUnit.JwtTokenTest" />
       <item itemvalue="JUnit.JwtTokenTest.CheckTrustedToken_FakeToken_ReturnsFalse" />
+      <item itemvalue="JUnit.JwtTokenTest.GetUsernameFromToken_InvalidToken_ReturnsNull" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JwtTokenTest.GetUsernameFromToken_InvalidToken_ReturnsNull" />
         <item itemvalue="JUnit.JwtTokenTest.CheckTrustedToken_FakeToken_ReturnsFalse" />
         <item itemvalue="JUnit.JwtTokenTest" />
         <item itemvalue="JUnit.JwtTokenTest.GetUsernameFromToken_ValidToken_ReturnsUsername" />
         <item itemvalue="JUnit.UserLogicTest.CreateAccount_FullAcount_AccountAdded" />
-        <item itemvalue="JUnit.LoginRestTest.GetLoginEndpointTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1079,14 +1077,11 @@
       <workItem from="1526212914222" duration="7763000" />
       <workItem from="1526277888327" duration="3157000" />
       <workItem from="1526285384140" duration="2464000" />
-      <workItem from="1526329457172" duration="1217000" />
+      <workItem from="1526329457172" duration="1402000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AccountRestTest - 2018.04.23 at 08h 27m 22s.xml">
-      <configuration name="AccountRestTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AccountRestTest - 2018.04.23 at 08h 27m 54s.xml">
       <configuration name="AccountRestTest" configurationId="JUnit" />
     </history-entry>
@@ -1114,9 +1109,12 @@
     <history-entry file="JwtTokenTest - 2018.05.14 at 22h 43m 46s.xml">
       <configuration name="JwtTokenTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="JwtTokenTest_CheckTrustedToken_FakeToken_ReturnsFalse - 2018.05.14 at 22h 44m 43s.xml">
+      <configuration name="JwtTokenTest.CheckTrustedToken_FakeToken_ReturnsFalse" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141234000" />
+    <option name="totallyTimeSpent" value="141419000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1132,7 +1130,7 @@
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.51865673" side_tool="true" visible="true" weight="0.3409586" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5191898" side_tool="true" visible="true" weight="0.3398693" />
       <window_info anchor="bottom" id="Application Servers" order="12" sideWeight="0.49946696" weight="0.33769062" />
       <window_info anchor="right" id="Maven Projects" order="11" />
       <window_info anchor="right" id="CDI" order="4" />
@@ -1148,16 +1146,16 @@
       <window_info id="UI Designer" order="3" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4936034" weight="0.35947713" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
-      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.47654584" weight="0.2977099" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.4760128" weight="0.2977099" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="4" />
       <window_info anchor="bottom" id="Java Enterprise" order="9" />
       <window_info anchor="right" id="Capture Analysis" order="8" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48134327" visible="true" weight="0.3409586" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.48081023" visible="true" weight="0.3398693" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32897604" />
       <window_info id="Persistence" order="5" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34541577" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34541577" />
       <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32979852" />
@@ -1178,7 +1176,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="38" />
+      <option name="time" value="39" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1555,8 +1553,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Utilities/JwtTokenTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="42" column="67" selection-start-line="42" selection-start-column="67" selection-end-line="42" selection-end-column="67" />
+        <state relative-caret-position="337">
+          <caret line="26" column="74" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#198#199#0" expanded="true" />

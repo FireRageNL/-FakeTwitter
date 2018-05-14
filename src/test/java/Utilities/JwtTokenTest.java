@@ -23,6 +23,11 @@ public class JwtTokenTest {
 	}
 
 	@Test
+	public void GetUsernameFromToken_InvalidToken_ReturnsNull(){
+		Assert.assertNull(tokenLogic.GetUsernameFromToken("this.is.fake"));
+	}
+
+	@Test
 	public void CheckTrustedToken_ValidToken_ReturnsTrue(){
 		String token = tokenLogic.EncodeToken("test");
 
